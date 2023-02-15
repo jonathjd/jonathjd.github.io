@@ -15,7 +15,11 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Winter 2019 I graduated with my bachelors degree in Biological Sciences from UC Irvine. Spring of 2022 I graduated from Central Washington University with a master's degree in Human Physiology where I studied the transcriptome of aging human skeletal muscle and learned Python, SQL, and some C++ & Java.
+
+Since then, I've learned HTML, CSS, Javascript, and a little bit about NoSQL databases such as Google Firestore. I've come to realize my interests lie at the intersection of human biology and computer science. I enjoy building web applications and dashboards to analyze high-throughput omics data to increase biomarker discorvery and drug development. 
+
+Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
 Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 
