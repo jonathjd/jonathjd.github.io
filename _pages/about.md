@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Contact jon.dickinson17@gmail.com
+subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: right
