@@ -18,6 +18,13 @@ I suspect that because this is my first post, it's going to be considerably bad.
 <hr>
 
 ## Undergrad
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/uci-img.jpg" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
 Fall of 2014I began my academic career at the Unversity of California Irvine as a track and field athlete studying Biology.
 
 
