@@ -30,26 +30,15 @@ Fall of 2014 I began my academic career at the Unversity of California Irvine as
 I still went with an Exercise Science specialization, and eventually went into coaching like I had initially planned, but there were a few things that were bothering my while I started my journey as a coach-
 
 1. Nepotism
-    - I dont want to come off as complaining, but man, it was depressing knowing that 
+    - I dont want to come off as complaining, but man, it was depressing knowing that landing a job was **extremely** dependent on who was on your resume.
+2. Know-it-all Culture
+    - There are definitely coaches who were critical, discerning, and adequately conveyed their level of understanding of certain topics. However, the modus operandi of most coaches is to make it seem like they have all the answers, which gets tiring after a while.
+3. Infinite internships that lead to $12 an hour
+    - Money isn't everything, I'll be the first to admit that. But while I was looking for my first job I had ~ 4 internships, a bachelors degree in Biology, and 4 years of collegiate athletics under my belt and was struggling to find a job that would pay me more than a $900 stipend per academic quarter (that is an actual quote).
 
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/crouser-img.jpg" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
-#### Hipster list
-<ul>
-    <li>brunch</li>
-    <li>fixie</li>
-    <li>raybans</li>
-    <li>messenger bag</li>
-</ul>
-
-Hoodie Thundercats retro, tote bag 8-bit Godard craft beer gastropub. Truffaut Tumblr taxidermy, raw denim Kickstarter sartorial dreamcatcher. Quinoa chambray slow-carb salvia readymade, bicycle rights 90's yr typewriter selfies letterpress cardigan vegan.
-
-<hr>
-
-Pug heirloom High Life vinyl swag, single-origin coffee four dollar toast taxidermy reprehenderit fap distillery master cleanse locavore. Est anim sapiente leggings Brooklyn ea. Thundercats locavore excepteur veniam eiusmod. Raw denim Truffaut Schlitz, migas sapiente Portland VHS twee Bushwick Marfa typewriter retro id keytar.
-
-<blockquote>
-    We do not grow absolutely, chronologically. We grow sometimes in one dimension, and not in another, unevenly. We grow partially. We are relative. We are mature in one realm, childish in another.
-    —Anais Nin
-</blockquote>
-
-Fap aliqua qui, scenester pug Echo Park polaroid irony shabby chic ex cardigan church-key Odd Future accusamus. Blog stumptown sartorial squid, gastropub duis aesthetic Truffaut vero. Pinterest tilde twee, odio mumblecore jean shorts lumbersexual.
