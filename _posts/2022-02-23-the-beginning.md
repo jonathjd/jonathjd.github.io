@@ -76,13 +76,7 @@ Toward's the end of my master's degree, I was miles ahead of where I started, bu
 
 ## The current state of affairs (2022-2023)
 
-I spent March 2022 - September 2022 applying to jobs, learning different languages, frameworks, database technologies, and finished up my thesis for my master's program. I sent out probably ~600 applications to SWE, Data Engineer, and DS roles, and got very few interviews. Just a rough estimate If I had to guess, I got ~5 coding challenges, ~9 initial phone interviews, and maybe 4 follow-up interviews after the fact. If we do some quick math we find the following:
-
-\begin{gather*}
-interviews_1=initial_1+followup_1\\
-interviews_2=initial_2+followup_2-secondround_2+finalround_2
-interviewrate=bad
-\end{gather*}
+I spent March 2022 - September 2022 applying to jobs, learning different languages, frameworks, database technologies, and finished up my thesis for my master's program. I sent out probably ~600 applications to SWE, Data Engineer, and DS roles, and got very few interviews. Just a rough estimate If I had to guess, I got ~5 coding challenges, ~9 initial phone interviews, and maybe 4 follow-up interviews after the fact. Not the best interview performance in the least.
 
 But, after a long, arduous process, I landed a role as a Bioinformatician at SomaLogic, a proteomics company based in Boulder, with a really cool technology. Would I have done some things differently? Probably, and I'll probably dive into what those are later. But I'm grateful I took that first step.
 
@@ -91,5 +85,7 @@ That's all I have for now. I'm excited to share more of my story, and help out t
 Also, feel free to hit the button below if you want to support the page, and posts like this.
 
 <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="jdickinson" data-color="#5F7FFF" data-emoji=""  data-font="Lato" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+
+<hr>
 
 P.S. I don't know how to remove the posts that came with this template when I forked this repo, and I kinda need the reference to the markdown files. So just roll with it for now. -Jon
