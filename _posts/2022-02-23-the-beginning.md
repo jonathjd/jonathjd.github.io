@@ -46,7 +46,7 @@ Regardless of how I felt about the above short-comings, one thing I did enjoy wa
 
 ### My first attempt at a neural network
 
-![Alt Text](assets/img/automation.gif)
+![Alt Text](https://github.com/jonathjd/jonathjd.github.io/blob/master/assets/img/automation.gif)
 
 <hr>
 
