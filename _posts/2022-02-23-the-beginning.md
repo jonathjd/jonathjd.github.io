@@ -80,7 +80,7 @@ I spent March 2022 - September 2022 applying to jobs, learning different languag
 
 But, after a long, arduous process, I landed a role as a Bioinformatician at SomaLogic, a proteomics company based in Boulder, with a really cool technology. Would I have done some things differently? Probably, and I'll probably dive into what those are later. But I'm grateful I took that first step.
 
-That's all I have for now. I'm excited to share more of my story, and help out those who were in my shoes 3 years ago. If you have questions, or just want to chat, feel free to reach me on LinkedIn or my email jon.dickinson17@gmail.com
+That's all I have for now. I'm excited to share more of my story, and help out those who were in my shoes years ago. If you have questions, or just want to chat, feel free to reach me on LinkedIn or my email jon.dickinson17@gmail.com
 
 Also, feel free to hit the button below if you want to support the page, and posts like this.
 
