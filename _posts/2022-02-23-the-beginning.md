@@ -42,3 +42,4 @@ I still went with an Exercise Science specialization, and eventually went into c
     </div>
 </div>
 
+P.S. I don't know how to remove the posts that came with this template when I forked this repo, and I kinda need the reference to the markdown files. So just roll with it for now. -Jon
