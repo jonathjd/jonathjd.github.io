@@ -25,7 +25,12 @@ I suspect that because this is my first post, it's going to be considerably bad.
     </div>
 </div>
 
-Fall of 2014I began my academic career at the Unversity of California Irvine as a track and field athlete studying Biology.
+Fall of 2014 I began my academic career at the Unversity of California Irvine as a track and field athlete studying Biology. To be quite honest, I wanted nothing to do with Biology (at least at first) I wanted to be an Exercise Science major, but that was a specialization within Biology that you could only declare at the end of your 2nd year, so I just went with it. I had a **huge** culture shock my first year there. I didn't know how to study at all, was intimidated by all the brilliant minds surrounding me, and finished my first year by the skin of my teeth (2.6 GPA). Thankfully, that wake up call was what I needed, and I not only excelled my 2nd year but began to appreciate the life sciences.
+
+I still went with an Exercise Science specialization, and eventually went into coaching like I had initially planned, but there were a few things that were bothering my while I started my journey as a coach-
+
+1. Nepotism
+    - I dont want to come off as complaining, but man, it was depressing knowing that 
 
 
 #### Hipster list
