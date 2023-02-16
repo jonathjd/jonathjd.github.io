@@ -17,6 +17,4 @@ social: true  # includes social icons at the bottom of the page
 
 Winter 2019 I graduated with my bachelors degree in Biological Sciences from UC Irvine. Spring of 2022 I graduated from Central Washington University with a master's degree in Human Physiology where I studied the transcriptome of aging human skeletal muscle.
 
-Since then, I've learned HTML, CSS, Javascript, and a little bit about NoSQL databases such as Google Firestore. My interests lie at the intersection of human biology and computer science. I enjoy building web applications and dashboards to analyze high-throughput omics data to increase biomarker discorvery and drug development. 
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Since then, I've learned HTML, CSS, Javascript, and a little bit about NoSQL databases such as Google Firestore. My interests lie at the intersection of human biology and computer science. I enjoy building web applications and dashboards to analyze high-throughput omics data to increase biomarker discorvery and drug development.
