@@ -44,10 +44,6 @@ I still went with an Exercise Science specialization, and eventually went into c
 
 Regardless of how I felt about the above short-comings, one thing I did enjoy was finding out ways to scale my business with regard to personal training and coaching. Becuase of the previously mentioned wages, I didn't have much money to spend on a SaaS to manage my coaching clients (think of apps like [Strong](https://www.strong.app/)) but I still wanted a way to calculate load increases from week to week without having to manually look at an excel sheet. This is a non-trivial task in sport science because adjusting load from week to week depends on a lot of variables that don't lend themselves well to measuring in an excel sheet ([JuggernautAI](https://www.juggernautai.app/?gclid=Cj0KCQiAxbefBhDfARIsAL4XLRrkxePP-M93V3UyLTRbh0qs58Z62TtYSI-7YXKZnQozBmvTE-BOAfUaAo0SEALw_wcB) does a great job at this).
 
-### My first attempt at a neural network
-
-![Alt Text](https://github.com/jonathjd/jonathjd.github.io/blob/master/assets/img/automation.gif)
-
 <hr>
 
 ## The Pivot (2020 - 2022)
