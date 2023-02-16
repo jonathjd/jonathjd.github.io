@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  the beginning
-date:   2022-02-23 16:40:16
+date:   2023-02-15 16:40:16
 description: excited for whats to come
 tags: introduction education
 categories: sample-posts
