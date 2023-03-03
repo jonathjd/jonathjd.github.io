@@ -46,7 +46,7 @@ Now that the 30,000ft view of the presentation is out of the way I want to move 
 
 > "It's not silence, it's punctuation." - Me 2023
 
-4. Don't let your presentation time be the only time your actually run through your presentation.
+4. Don't let your presentation time be the only time you actually run through your presentation.
 
 5. Do not go over the allotted time for your presentation. The audience will forgive a presentation that's a little short, but nobody likes a presentation that is too long.
 
@@ -60,15 +60,15 @@ Now that the 30,000ft view of the presentation is out of the way I want to move 
 
 2. Do visit wherever you are giving the presentation before hand to make sure you have an idea of lighting, the projector, where "important" people will be sitting so you can see if they can see well from their vantage. If you can do a run through there that's even better.
 
-3. If you have say on when you can present, choose mid morning (~10am). This way you're not pressed for time during set up.
+3. If you have a say on when you can present, choose mid morning (~10am). This way you're not pressed for time during set up.
 
 4. Ask somebody to watch your run through. Hopefully they are representative of your audience so they can provide feedback as to what is clear and what isn't.
 
-5. Add nice, but minimal slide transitions between slides. I like how the current slide goes up and the next slide comes up from the bottom. I think it gives a movie reel feel.
+5. Add nice, but _minimal_ slide transitions between slides. I like how the current slide goes up and the next slide comes up from the bottom. I think it gives a movie reel feel.
 
-6. Add nice, but minimal decorations to each slide. I like a light pastel background (usually yellow for no particular reason).
+6. Add nice, but _minimal_ decorations to each slide. I like a light pastel background (usually yellow for no particular reason).
 
-7. Fully explain each figure, chart, and piece of data on your slide. That means what the axes are, the units, and why the figure is there at all. If there is no reason for the figure to be there and you arent going to address it, remove it.
+7. Fully explain each figure, chart, and piece of data on your slide. That means what the axes are, the units, and why the figure is there at all. If there is no reason for the figure to be there and you aren't going to address it, remove it.
 
 8. Think of any and all question's that could possibly arise and write them down/research them. I go as deep as I can and look at all possible questions and derivations of those questions not only because I want to be able to address them, but if there is a question I think I will be asked that I haven't looked into I will be unduly nervous.
 
@@ -80,11 +80,11 @@ Now that the 30,000ft view of the presentation is out of the way I want to move 
 
 ## How to make your presentation exceptional
 
-1. Add flare to the beginning of your presentation. I had to give a presentation on how aging affects cardiorespiratory musculature and my first slide was the image of [Oedipus](https://interestingliterature.com/2014/08/can-you-solve-the-sphinxs-other-riddle/#:~:text='What%20goes%20on%20four%20legs,stick%20in%20his%20twilight%20years.) and the Sphinx along with the question "Does anybody know what this is?". That was probably my best start to a talk that I haven't been able to replicate since. This allows some back and forth between yourself and the audience and you can build some rappor.
+- Add flare to the beginning of your presentation. I had to give a presentation on how aging affects cardiorespiratory musculature and my first slide was the image of [Oedipus](https://interestingliterature.com/2014/08/can-you-solve-the-sphinxs-other-riddle/#:~:text='What%20goes%20on%20four%20legs,stick%20in%20his%20twilight%20years.) and the Sphinx along with the question "Does anybody know what this is?". That was probably my best start to a talk that I haven't been able to replicate since. This allows some back and forth between yourself and the audience and you can build some rappor.
 
 > **_NOTE:_** Don't overdo this. It should be one slide and don't spend half your time letting the audience guess. This isn't Jeopardy.
 
-2. Research your audience and if it's applicable, add in a reference or joke. For instance, if you're presenting a scatterplot looking at VO2max and weight and you have a trained cyclist, make a small joke about how "Ted's (imaginary cyclist) VO2max is actually right here (imaginary VO2max scatterplot and I am pointing at a data point that is very high)". You get the idea. This doesn't lend itself well to text.
+- Research your audience and if it's applicable, add in a reference or joke. For instance, if you're presenting a scatterplot looking at VO2max and weight and you have a trained cyclist, make a small joke about how "Ted's (imaginary cyclist) VO2max is actually right here (imaginary VO2max scatterplot and I am pointing at a data point that is very high)". You get the idea. This doesn't lend itself well to text.
 
 ## A note on virtual presentations
 
