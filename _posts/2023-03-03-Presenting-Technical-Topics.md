@@ -18,13 +18,13 @@ This really should be reason enough to want to get better at presenting, but if 
 
 > **_NOTE:_** Like I mentioned, this is primarily for presenting *"technical"* topics, and for presentations that have things like graphs, figures, data, charts, hypotheses, etc. This advice may or may not apply to presenting on other topics (although, I'd be willing to bet a good portion did).
 
-<iframe src="https://giphy.com/embed/32mC2kXYWCsg0" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/key-and-peele-sweat-quizz-32mC2kXYWCsg0">via GIPHY</a></p>
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/LRVnPYqM8DLag" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/reactiongifs-LRVnPYqM8DLag">via GIPHY</a></p>
 
 <hr>
 
 ## You're not presenting, you're telling a story
 
-<iframe src="https://giphy.com/embed/VGG8UY1nEl66Y" width="480" height="392" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/adventure-latin-flinch-VGG8UY1nEl66Y">via GIPHY</a></p>
+<div style="width:100%;height:0;padding-bottom:40%;position:relative;"><iframe src="https://giphy.com/embed/14bWswbeWGzYEo" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/movie-film-cute-14bWswbeWGzYEo">via GIPHY</a></p>
 
 First and foremost, you're not presenting, you are telling a story. It doesn't matter if this is a "lay" presentation, or you're speaking to a room full of physicists about quantum theory. I can guarantee you that most people do not want to hear about why you used a bonferroni corrected p-value and not a benjamini-hochberg corrected one (well, I should say very few do), but they do want to hear a story.
 
@@ -42,13 +42,15 @@ Now that the 30,000ft view of the presentation is out of the way I want to move 
 
 2. Present small figures/graphs that are not interpretable. Everything on your slide should be clear and have a purpose.
 
-3. Dont speak too fast. I went to a conference recently and on the way their my girlfriend was practicing a talk she was going to give. I gave a few words of advice that she proclaims was pretty prophetic:
+3. Dont speak too fast. I went to a conference recently and on the way their my girlfriend was practicing a talk she was going to give. I gave a few words of advice that she proclaims were pretty prophetic:
 
 > "It's not silence, it's punctuation." - Me 2023
 
 4. Don't let your presentation time be the only time your actually run through your presentation.
 
 5. Do not go over the allotted time for your presentation. The audience will forgive a presentation that's a little short, but nobody likes a presentation that is too long.
+
+6. Skip the "outline", or "overview" slide. Your overview should cover maybe 3 things max. Just verbally say it and skip the slide.
 
 ## Do's
 
@@ -66,8 +68,41 @@ Now that the 30,000ft view of the presentation is out of the way I want to move 
 
 6. Add nice, but minimal decorations to each slide. I like a light pastel background (usually yellow for no particular reason).
 
-6. Fully explain each figure, chart, and piece of data on your slide. That means what the axes are, the units, and why the figure is there at all. If there is no reason for the figure to be there and you arent going to address it, remove it.
+7. Fully explain each figure, chart, and piece of data on your slide. That means what the axes are, the units, and why the figure is there at all. If there is no reason for the figure to be there and you arent going to address it, remove it.
 
+8. Think of any and all question's that could possibly arise and write them down/research them. I go as deep as I can and look at all possible questions and derivations of those questions not only because I want to be able to address them, but if there is a question I think I will be asked that I haven't looked into I will be unduly nervous.
+
+9. Do not ramble when addressing a question. Address the question and move on. If you do not understand the question ask for clarification then address the question, and move on.
+
+10. This might be more personal, but I ask to limit questions until the end. If it's a clarification question that's ok, but I like to avoid tangential conversation until the end.
+
+11. Prepare *"backdoor"* slides. These are slides that don't quite fit into the flow of the presentation but will be helpful when addressing questions that might pop up.
+
+## How to make your presentation exceptional
+
+1. Add flare to the beginning of your presentation. I had to give a presentation on how aging affects cardiorespiratory musculature and my first slide was the image of [Oedipus](https://interestingliterature.com/2014/08/can-you-solve-the-sphinxs-other-riddle/#:~:text='What%20goes%20on%20four%20legs,stick%20in%20his%20twilight%20years.) and the Sphinx along with the question "Does anybody know what this is?". That was probably my best start to a talk that I haven't been able to replicate since. This allows some back and forth between yourself and the audience and you can build some rappor.
+
+> **_NOTE:_** Don't overdo this. It should be one slide and don't spend half your time letting the audience guess. This isn't Jeopardy.
+
+2. Research your audience and if it's applicable, add in a reference or joke. For instance, if you're presenting a scatterplot looking at VO2max and weight and you have a trained cyclist, make a small joke about how "Ted's (imaginary cyclist) VO2max is actually right here (imaginary VO2max scatterplot and I am pointing at a data point that is very high)". You get the idea. This doesn't lend itself well to text.
+
+## A note on virtual presentations
+
+Today there are more webinars and virtual presentations which makes presenting much more difficult. You can't "feel" the room, gauge involvement, or notice body language. The best bit of advice I can give is do everything that you would if it were an in person presentation. 
+
+1. If it's on Zoom, set up a mock zoom meeting with a friend so you know how to share your screen.
+
+2. Also, DO NOT read from your notes on another screen. Your reading voice is very monotone and it's obvious your reading. Reading in and of itself isn't necessarily a bad thing, but it doesn't sound or feel conversational, which is already tough enough in a virtual format.
+
+## Examples
+
+Here are some examples of presenations that I really like, as well as one I gave myself. Hope they help out.
+
+[MIT-Presenting](https://www.youtube.com/watch?v=Unzc731iCUY)
+
+[Nate-Velt](https://www.youtube.com/watch?v=g6I1WhYE2Kk&t=453s) PhD Defense
+
+[My](https://youtu.be/rgA2eIzdoNo) thesis dissertation
 
 If you feel like this helped you out, feel free click the link below and support this post. Here's my cat Vader for encouragement.
 
