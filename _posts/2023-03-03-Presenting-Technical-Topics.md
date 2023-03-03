@@ -88,6 +88,8 @@ Now that the 30,000ft view of the presentation is out of the way I want to move 
 
 ## A note on virtual presentations
 
+<div style="width:100%;height:0;padding-bottom:60%;position:relative;"><iframe src="https://giphy.com/embed/ZGBystIZzVZs0tZYb1" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/ZGBystIZzVZs0tZYb1">via GIPHY</a></p>
+
 Today there are more webinars and virtual presentations which makes presenting much more difficult. You can't "feel" the room, gauge involvement, or notice body language. The best bit of advice I can give is do everything that you would if it were an in person presentation. 
 
 1. If it's on Zoom, set up a mock zoom meeting with a friend so you know how to share your screen.
