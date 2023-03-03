@@ -42,7 +42,7 @@ Now that the 30,000ft view of the presentation is out of the way I want to move 
 
 2. Present small figures/graphs that are not interpretable. Everything on your slide should be clear and have a purpose.
 
-3. Dont speak too fast. I went to a conference recently and on the way their my girlfriend was practicing a talk she was going to give. I gave a few words of advice that she proclaims were pretty prophetic:
+3. Dont speak too fast. I went to a conference recently and on the way there my girlfriend was practicing a talk she was going to give. I gave a few words of advice that she proclaims were pretty prophetic:
 
 > "It's not silence, it's punctuation." - Me 2023
 
