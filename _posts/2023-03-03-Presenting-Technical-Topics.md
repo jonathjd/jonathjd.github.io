@@ -52,6 +52,8 @@ Now that the 30,000ft view of the presentation is out of the way I want to move 
 
 6. Skip the "outline", or "overview" slide. Your overview should cover maybe 3 things max. Just verbally say it and skip the slide.
 
+<hr>
+
 ## Do's
 
 <div style="width:100%;height:0;padding-bottom:51%;position:relative;"><iframe src="https://giphy.com/embed/26FmQ6EOvLxp6cWyY" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/starwars-star-wars-yoda-26FmQ6EOvLxp6cWyY">via GIPHY</a></p>
@@ -78,6 +80,8 @@ Now that the 30,000ft view of the presentation is out of the way I want to move 
 
 11. Prepare *"backdoor"* slides. These are slides that don't quite fit into the flow of the presentation but will be helpful when addressing questions that might pop up.
 
+<hr>
+
 ## How to make your presentation exceptional
 
 - Add flare to the beginning of your presentation. I had to give a presentation on how aging affects cardiorespiratory musculature and my first slide was the image of [Oedipus](https://interestingliterature.com/2014/08/can-you-solve-the-sphinxs-other-riddle/#:~:text='What%20goes%20on%20four%20legs,stick%20in%20his%20twilight%20years.) and the Sphinx along with the question "Does anybody know what this is?". That was probably my best start to a talk that I haven't been able to replicate since. This allows some back and forth between yourself and the audience and you can build some rappor.
@@ -85,6 +89,8 @@ Now that the 30,000ft view of the presentation is out of the way I want to move 
 > **_NOTE:_** Don't overdo this. It should be one slide and don't spend half your time letting the audience guess. This isn't Jeopardy.
 
 - Research your audience and if it's applicable, add in a reference or joke. For instance, if you're presenting a scatterplot looking at VO2max and weight and you have a trained cyclist, make a small joke about how "Ted's (imaginary cyclist) VO2max is actually right here (imaginary VO2max scatterplot and I am pointing at a data point that is very high)". You get the idea. This doesn't lend itself well to text.
+
+<hr>
 
 ## A note on virtual presentations
 
@@ -95,6 +101,8 @@ Today there are more webinars and virtual presentations which makes presenting m
 1. If it's on Zoom, set up a mock zoom meeting with a friend so you know how to share your screen.
 
 2. Also, DO NOT read from your notes on another screen. Your reading voice is very monotone and it's obvious your reading. Reading in and of itself isn't necessarily a bad thing, but it doesn't sound or feel conversational, which is already tough enough in a virtual format.
+
+<hr>
 
 ## Examples
 
