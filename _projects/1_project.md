@@ -69,7 +69,7 @@ def fetch_agg_data():
     # Create pandas df to export as csv
     df = pd.DataFrame()
 
-    # fetch client ID's and append to dict
+    # fetch client ID's and append to list
     for subcollection in subcollections:
         client_list.append(subcollection.id)
 
