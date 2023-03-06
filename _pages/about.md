@@ -15,6 +15,10 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-My interests lie at the intersection of human biology and computer science. I enjoy building web applications and dashboards to analyze high-throughput omics data to increase biomarker discorvery and drug development.
+Hey! Welcome to my website. Per the name and web url, my name is Jon. I currently work as a Data Scientist- but enjoy software engineering, bioinformatics, and really all things data, science, and software.
 
-Winter 2019 I graduated with my bachelors degree in Biological Sciences from UC Irvine. Spring of 2022 I graduated from Central Washington University with a master's degree in Human Physiology where I studied the transcriptome of aging human skeletal muscle. Since then, I've learned HTML, CSS, Javascript, and a little bit about NoSQL databases such as Google Firestore.
+I post my [thoughts](https://jonathjd.github.io/blog/) fairly often and about a wide range of topics. If you want to learn about my unconventional journey into industry, start [here](https://jonathjd.github.io/blog/2023/the-beginning/). Or maybe you're thinking about starting a bootcamp? Read about my $10k bootcamp experience [here](https://jonathjd.github.io/blog/2023/Pathrise/).
+
+If you want to support some of my work. Feel free to buy me a coffee ☕️ using the link below.
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="jdickinson" data-color="#5F7FFF" data-emoji=""  data-font="Lato" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
