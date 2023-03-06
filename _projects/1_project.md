@@ -60,7 +60,7 @@ CWU Fitlab is a full-stack web application created for an upper level practicum 
 
 Code sample of a function that fetches client data from the backend and creates a pandas dataframe to display on the technican page.
 
-{% highlight python lineos %}
+{% highlight python linenos %}
 
 def fetch_agg_data():
     collection_ref = db.collection("clients")
