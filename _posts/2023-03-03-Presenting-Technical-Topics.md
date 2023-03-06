@@ -4,7 +4,7 @@ title:  Presenting Technical Topics
 date: 2023-03-03 10:40:16
 description: My take at sucking less at presenting
 tags: technical software data presentation
-categories: presentation data software
+categories: academia
 giscus_comments: true
 ---
 
