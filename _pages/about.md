@@ -19,8 +19,4 @@ Hey! Welcome to my website. Per the name and web url, my name is Jon. I currentl
 
 I post my [thoughts](https://jonathjd.github.io/blog/) fairly often and about a wide range of topics. If you want to learn about my unconventional journey into industry, start [here](https://jonathjd.github.io/blog/2023/the-beginning/). Or maybe you're thinking about starting a bootcamp? Read about my $10k bootcamp experience [here](https://jonathjd.github.io/blog/2023/Pathrise/).
 
-If you want to support some of my work. Feel free to buy me a coffee ☕️ using the link below.
-
-<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="jdickinson" data-color="#5F7FFF" data-emoji=""  data-font="Lato" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
-
 <hr>
