@@ -13,6 +13,8 @@ CWU Fitlab is a full-stack web application created for an upper level practicum 
 
 [Application](https://cwu-fitlab.streamlit.app/)
 
+<hr>
+
 ## Tech Stack
 
 - 🐍 Python 🐍
@@ -20,6 +22,8 @@ CWU Fitlab is a full-stack web application created for an upper level practicum 
 - CSS
 - Google Cloud Platform
 - Firebase
+
+<hr>
 
 ## Data Science Packages
 
@@ -30,6 +34,8 @@ CWU Fitlab is a full-stack web application created for an upper level practicum 
 - Plotly
 - Plotly Express
 
+<hr>
+
 ## Notable Features
 
 - Dashboard for clients to track progress over time
@@ -37,6 +43,7 @@ CWU Fitlab is a full-stack web application created for an upper level practicum 
 - Update Firebase backend from "Technician" tab
 - Calendly calendar to schedule visits
 
+<hr>
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -47,21 +54,32 @@ CWU Fitlab is a full-stack web application created for an upper level practicum 
     </div>
 </div>
 
+<hr>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+## Code sample
 
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+Code sample of a function that fetches client data from the backend and creates a pandas dataframe to display on the technican page.
+
+{% highlight python lineos %}
+
+def fetch_agg_data():
+    collection_ref = db.collection("clients")
+    subcollections = collection_ref.list_documents()
+    client_list = []
+    # Create pandas df to export as csv
+    df = pd.DataFrame()
+
+    # fetch client ID's and append to dict
+    for subcollection in subcollections:
+        client_list.append(subcollection.id)
+
+    for c in client_list:
+        data = fetch_client_data(c)
+        data["Client"] = c
+        df = pd.concat([df, data], axis=0)
+
+    df.index = range(0,len(df))
+
+    return df   
+
+{% endhighlight %}
