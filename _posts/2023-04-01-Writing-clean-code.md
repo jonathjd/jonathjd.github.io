@@ -37,7 +37,7 @@ I've been reading the book *"Beyond The Basic Stuff With Python: Best Practices 
     </div>
 </div>
 
-I wasn't really planning on getting this book, but my girlfriend and I were at [Powell's](https://www.powells.com/) bookstore in Portland after a conference looking around. I never plan on getting anything but when your at onr of the largest bookstores in the world it's tough to make it out without seeing something that catches your eye.
+I wasn't really planning on getting this book, but my girlfriend and I were at [Powell's](https://www.powells.com/) bookstore in Portland after a conference looking around. I never plan on getting anything but when your at one of the largest bookstores in the world it's tough to make it out without seeing something that catches your eye.
 
 I initially saw Al Sweigarts first book *Automate The Boring Stuff with Python* which has a nice cover and feng shui to it, but after thumbing through a couple pages I thought the content seemed not quite as advanced as I was hoping. When I put it back I saw *"Beyond The Basic Stuff With Python: Best Practices For Writing Clean Code"* and thought it was great. Some of the topics I knew fairly well, some were new and would help me train my engineering brain, so I ponied up the $34.95 and gave it a go.
 
@@ -156,11 +156,11 @@ This section was interesting because I frequently see various naming conventions
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/var_names.jpg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/code_smell.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
-Al defines a code smell as a source pattern that signals a potential/future bug 🐛. I'm going to be completely transparent on this one and say that I am guilty of implementing many of the below code smells and I'll post examples of such transgression with their proper corrections.
+Al defines a code smell as a source pattern that signals a potential/future bug 🐛. I'm going to be completely transparent on this one and say that I am guilty of implementing many of the below code smells and I'll post examples of such transgressions with their proper corrections.
 
 - <span>Duplicate code</span>
 
@@ -303,7 +303,7 @@ def plot_fig(df, xaxis, yaxis, title, params):
                 size=12,
                 color='black'
             ),
-            title=f'{yaxis}
+            title=f'{yaxis}'
         ),
         autosize=False,
         margin=dict(
@@ -319,11 +319,11 @@ def plot_fig(df, xaxis, yaxis, title, params):
 
 ```
 
-While still not perfect, now I just have to call this function with the correct parameters and do away with the duplicate code. I could even refactor it further to only have to call this function once in a for loop or while loop.
+While still not perfect, now I just have to call this function with the correct parameters and do away with the duplicate code. I could even refactor it further to only have to call this function once in a for loop.
 
 - Print debugging
 
-I definitely still print debug. I also use the debugger in the editor as well on occasion but I just find a well scatter assortment of print statements usually gets the job done fairly well. However, what Al is alluding to is leaving these print statements in the code base after the bug as been fixed. To that I can say I not done suprisingly.
+I definitely still print debug. I also use the debugger in the editor as well on occasion but I just find a well scatter assortment of print statements usually gets the job done fairly well. However, what Al is alluding to is leaving these print statements in the code base after the bug as been fixed. To that I can say I have not done suprisingly.
 
 - Hungarian Notation & Variables with Numeric Suffixes
 
@@ -347,19 +347,22 @@ As you can see this was something that I was led to believe was a best practice.
 This section is particularly interesting because I was led to believe that many of these myths were actually true. It would actually be great to get input on these from other engineers in the comments below.
 
 - Myth: Functions should have only 1 return statement
+
 My professor from that intro CS class said this was a problem with people who learned Python as their first language, and that it was a poor practice. I abided by this for **two years**. This paradigm was completely shattered when I asked my friend who was a senior SWE to help me debug a function I had written and he started sprinkling in return statements left and right. I thought he was just messing with me and I asked him if it was ok to put so many return statements in one function and his reply was, *"Yea. Why not?"*. He was certainly right. Why not?
 
 - Myth: Global variables are bad
+
 This was one I was actually really suprised about. This wasn't something that my old school CS prof had told me, but something that I have heard repeatedly. I've even heard global variables referred to as "polluting the global namespace". Inituitively, it also seems like a good practice to at least minimize the number of global variables in a program, which is an idea that Al supports. But the idea that all global variables are bad allegedly is a code smell myth.
 
 - Myth: Comments are unneccesary
+
 I have gone through many iterations of this one. I began (as we probably all did) with not ever commenting my code at all, to commenting every single line (literally), to minimizing my comments again. The idea that the code should be the comments is something that is almost as pervasive as the global variables idea. I've come to put them in when I know for certain I will not know what a part of my codebase does when I come back. But other than that I kind of cross my fingers and hope that my code is readable when I come back (kind of kidding kind of not).
 
 ## Pythonic code == Clean Code?
 
 <div style="width:100%;height:0;padding-bottom:52%;position:relative;"><iframe src="https://giphy.com/embed/coxQHKASG60HrHtvkt" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/coxQHKASG60HrHtvkt">via GIPHY</a></p>
 
-Pythonic code can look sleek and impressive. And you will often see me say that I want to write more "Pythonic" code. This is true for the most part, but I have come to realize that code that is written well and true to the language is "Pythonic".
+Pythonic code can look sleek and impressive, and you will often see me say that I want to write more "Pythonic" code. This is true for the most part, but I have come to realize that code that is well written and true to the language is "Pythonic".
 
 **For example:**
 
