@@ -251,7 +251,7 @@ The only thing that differed from this plot to the ***6*** other Plotly figures 
 Below would be a much better implementation.
 
 ```python
-def plot_fig(df, xaxis, yaxis, title, params):        
+def plot_variable(df, xaxis, yaxis, title):        
 
     fig = go.Figure()
 
