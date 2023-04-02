@@ -418,7 +418,7 @@ The above code is certainly more "Pythonic", but is it more readable? In my opin
 
 This article was by no means comprehensive. There are many more examples of these sections that Al goes over in great detail and with a good amount of clarity. Overall, I am really enjoying this book. It's easy to read and not dry like most technical books tend to be. 
 
-Would I pay $35 for it? Yes. I don't know if I would pay more than $35, especially given that it's free on the internet, but $35 is definitely a fair price for what I have read so far.
+Would I pay 35 dollars for it? Yes. I don't know if I would pay more than 35 dollars, especially given that it's free on the internet, but 35 is definitely a fair price for what I have read so far.
 
 I can't give it a conclusive rating yet because I'm not finished with the entire book (just the code formatting section). But I did want to get this out there to hopefully encourage some discussion, and highlight a solid resource I have been using.
 
