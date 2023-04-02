@@ -15,11 +15,12 @@ toc:
   - name: Overview
   - name: Code Formatting
     subsections:
-        - name: Black
-        - name: Vertical Spacing
+    - name: Black
+    - name: Vertical Spacing
   - name: Variable Names
   - name: Code Smells
-        - name: Fake Code Smells
+    subsections:
+    - name: Fake Code Smells
   - name: Pythonic Code == Clean Code?
   - name: Conclusion/Final Thoughts
 ---
