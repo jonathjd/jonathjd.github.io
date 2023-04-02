@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: distill
 title:  Writing clean code
 date: 2023-04-01 10:40:16
 description: Writing clean code in Python
