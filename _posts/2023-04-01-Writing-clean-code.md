@@ -7,6 +7,11 @@ tags: technical software data code
 categories: software-engineering code
 giscus_comments: true
 
+authors:
+  - name: Jonathan Dickinson
+    affiliations:
+      name: None
+
 toc:
     # if a section has subsections, you can add them as follows:
     # subsections:
