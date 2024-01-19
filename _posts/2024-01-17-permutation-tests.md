@@ -1,14 +1,12 @@
 ---
 layout: distill
 title:  P-value vs Effect Size
-date: 2024-01-15 10:40:16
+date: 2024-01-17 10:40:16
 description: Interpreting significant results when n gets large
 tags: technical python data code stats
 categories: data-science code
 giscus_comments: true
 ---
-
-<hr>
 
 ## Overview
 
