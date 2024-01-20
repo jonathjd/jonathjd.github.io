@@ -73,21 +73,21 @@ If you would like to see the results of the analysis, scroll down to the *"First
 
 
 **- COSTT4_A**
-   - The average annual total cost of attendance, including tuition and fees, books and supplies, and living expenses for all full-time, first-time, degree/certificate-seeking undergraduates who receive Title IV aid. For academic-year institutions, average cost of attendance represents an average of all programs and includes only full-time, first-time, degree/certificate-seeking undergraduates who first enrolled in the fall term. For non-academic-year institutions (program or continuous enrollment), average cost of attendance represents the program with the largest enrollment at the institution, and it includes full-time, first-time, degree/certificate-seeking undergraduates who first enrolled at any time during the academic year. For programs less than 1 year in length, this represents the cost for the full program.
+The average annual total cost of attendance, including tuition and fees, books and supplies, and living expenses for all full-time, first-time, degree/certificate-seeking undergraduates who receive Title IV aid. For academic-year institutions, average cost of attendance represents an average of all programs and includes only full-time, first-time, degree/certificate-seeking undergraduates who first enrolled in the fall term. For non-academic-year institutions (program or continuous enrollment), average cost of attendance represents the program with the largest enrollment at the institution, and it includes full-time, first-time, degree/certificate-seeking undergraduates who first enrolled at any time during the academic year. For programs less than 1 year in length, this represents the cost for the full program.
 **- CONTROL**
-   - Control is the ownership of the institution with 1=Public, 2=Private non profit, 3=Private for profit.
+Control is the ownership of the institution with 1=Public, 2=Private non profit, 3=Private for profit.
 **- GRAD_DEBT_MDN**
-   - The median debt for students who have completed/graduated.
+The median debt for students who have completed/graduated.
 **- TUITIONFEE_IN**
-   - In state tuition.
+In state tuition.
 **- TUITIONFEE_OUT**
-   - Out of state tuition
+Out of state tuition
 **- TUITFTE**
-   - Net tuition revenue (tuition revenue minus discounts and allowances) divided by the number of FTE students (undergraduates and graduate students).
+Net tuition revenue (tuition revenue minus discounts and allowances) divided by the number of FTE students (undergraduates and graduate students).
 **- INEXPFTE**
-   - Instructional expenditures divided by the number of FTE students (undergraduates and graduate students).
+Instructional expenditures divided by the number of FTE students (undergraduates and graduate students).
 **- AVGFACSAL**
-   - Average faculty salary per month, calculated from the IPEDS Human Resources component. This metric is calculated as the total salary outlays divided by the number of months worked for all full-time nonmedical instructional staff. Prior to the 2011-12 academic year, when months worked were reported in groups, the value for 9-10 months is estimated as 9.5 months and the value for 11-12 months is estimated as 11.5 months. Values prior to the 2003-04 academic year are limited to degree-granting institutions for consistency with values in subsequent academic years.
+Average faculty salary per month, calculated from the IPEDS Human Resources component. This metric is calculated as the total salary outlays divided by the number of months worked for all full-time nonmedical instructional staff. Prior to the 2011-12 academic year, when months worked were reported in groups, the value for 9-10 months is estimated as 9.5 months and the value for 11-12 months is estimated as 11.5 months. Values prior to the 2003-04 academic year are limited to degree-granting institutions for consistency with values in subsequent academic years.
 
 ## First Try
 As I mentioned earlier, this dataset has null values of the following proportion in each column:
