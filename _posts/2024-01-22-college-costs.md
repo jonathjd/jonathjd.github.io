@@ -191,7 +191,8 @@ residuals_df = pd.concat(residuals_list)
 print(error_dicts["bayesian_ridge_regression"])
 ```
 
-**Here are the results**
+**Here are the results:**
+
 ***Bayesian Ridge Regression***
 <div class="row mt-3">
    <div class="col-sm mt-3 mt-md-0">
