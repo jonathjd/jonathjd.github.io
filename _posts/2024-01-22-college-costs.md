@@ -43,7 +43,6 @@ College is expensive, and only getting more expensive year after year. Whether t
 ## College Scorecard
 If you haven't heard of the college scorecard, you aren't alone. The College Scorecard dataset is a comprehensive and publicly available dataset provided by the U.S. Department of Education. It contains information about various colleges and universities in the United States and is designed to help students and their families make informed decisions about higher education. Now in all fairness, the U.S. Department of Education has made these data more accessible via a web tool at https://collegescorecard.ed.gov/ where you can query the data more effectively.
 
-
 **Some of the data available in this dataset are as follows:**
 - Admission statistics
 - Graduation rates
@@ -55,14 +54,11 @@ If you haven't heard of the college scorecard, you aren't alone. The College Sco
 ## Data Imputation
 Although this dataset is large and very comprehensive, there is a lot of missing data. Ideally, all universities would share the cost of attendance, but that isn't always the case. In this project we are going to try to impute missing values via 4 different methods:
 
-
 ### Linear Regression
 Linear regression imputation is fairly straight forward. It involves predicting missing values by fitting a linear model to the observed data. This model estimates the relationship between the variable with missing values and other relevant variables in the dataset.
 
-
 ### Bayesian Ridge Regression
 Bayesian ridge regression is similar to linear regression imputation. This technique incorporates a Bayesian approach and considers the uncertainty in the model parameters by assigning prior distributions. This approach is hopefully going to be particularly useful with dealing with the multicollinearity we see in our dataset. This model estimates the posterior distribution of the missing values, providing a range of plausible imputed values along with their probabilities. For the sake of simplicity we won't get into the probability of each imputed value and just take the value with the highest probability.
-
 
 ### Random Forest Regression
 Random forest regression uses an ensemble of decision trees to predict the missing values. Random forest models are robust and can handle non-linear relationships, interactions between variables, and multicolinearity among variables as well. Multiple decision trees are trained on the observed data, and the missing values are predicted by aggregating the predictions from individual trees.
@@ -71,7 +67,6 @@ Random forest regression uses an ensemble of decision trees to predict the missi
 ### K Nearest Neighbor Regression
 KNN imputation involves predicting missing values by considering the values of their k-nearest neighbors in the observed data. It's based on the idea that similar instances have similar values for the variable of interest.
 For each missing value, the algorithm identifies the k-nearest neighbors in the observed data and averages their values to impute the missing value. I am going to leave k at 5 for this demonstration, but I would imagine there is a hyper-parameter tuning technique that we can explore after this initial dive.
-
 
 ## About The Data
 If you would like to see the results of the analysis, scroll down to the *"First Try"* section. Below I am going to describe each field in the college scorecard that I will be using for this analysis:
@@ -93,7 +88,6 @@ If you would like to see the results of the analysis, scroll down to the *"First
    - Instructional expenditures divided by the number of FTE students (undergraduates and graduate students).
 **- AVGFACSAL**
    - Average faculty salary per month, calculated from the IPEDS Human Resources component. This metric is calculated as the total salary outlays divided by the number of months worked for all full-time nonmedical instructional staff. Prior to the 2011-12 academic year, when months worked were reported in groups, the value for 9-10 months is estimated as 9.5 months and the value for 11-12 months is estimated as 11.5 months. Values prior to the 2003-04 academic year are limited to degree-granting institutions for consistency with values in subsequent academic years.
-
 
 ## First Try
 As I mentioned earlier, this dataset has null values of the following proportion in each column:
