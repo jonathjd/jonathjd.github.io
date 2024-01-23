@@ -112,15 +112,15 @@ In an ideal regression model, you want the residuals to be randomly scattered ar
 Our model has improved at handling outliers in our dataset from our last attempt, however there was a increase in MAE by 1.5%. Also, random forest regression seemed to do the best again-
 
 **Random Forest**
-- MAE: $3,481.87 -> $3,535.72
-- MSE: 30,602,315.13 -> 29,873,710.69
-- RMSE: $5,531.94 -> $5,465.68
+- MAE: $3,481.87 > $3,535.72
+- MSE: 30,602,315.13 > 29,873,710.69
+- RMSE: $5,531.94 > $5,465.68
 
 The runner up with this log transformed variable was actually *linear regression*, although bayesian ridge regression was very close behind. ***It's also worth mentioning that linear regression did worse with the log transformed data than bayesian ridge regression did with the untransformed data:***
 
-- MAE: $4,292.5 -> $5,345.28
-- MSE: 37,296,221.96 -> 58,008,514.88
-- RMSE: $6,107.06 -> $7,616.33
+- MAE: $4,292.5 > $5,345.28
+- MSE: 37,296,221.96 > 58,008,514.88
+- RMSE: $6,107.06 > $7,616.33
 
 We can see that although the log transformation did reduce the outliers, it gave our features odd distributions, likely leading to the reduced performance of models other than random forest.
 
