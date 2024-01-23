@@ -122,6 +122,15 @@ The runner up with this log transformed variable was actually *linear regression
 - MSE: 37,296,221.96 -> 58,008,514.88
 - RMSE: $6,107.06 -> $7,616.33
 
+We can see that although the log transformation did reduce the outliers, it gave our features odd distributions, likely leading to the reduced performance of models other than random forest.
+
+<div class="row mt-3">
+   <div class="col-sm mt-3 mt-md-0">
+       {% include figure.html path="assets/img/logtrans_truevalues.png" class="img-fluid rounded z-depth-1" %}
+   </div>
+</div>
+
+
 ## Conclusion
 Overall, a log transformation enhanced our model's robustness to outliers (well, only random forest really), it slightly affected its general prediction accuracy. Honestly though, the improvement to model performance was very minor, and at the cost of adding a slight bias to the model (+1 to entire dataset). Moving forward we will go back to the original dataset. Next up, One-Hot encoding! This will allow us to incorporate categorical variables more effectively into our models, potentially unlocking more insights and improving predictive performance.
 
