@@ -45,7 +45,7 @@ NAGAACTTGGCGGCGAATGGGCTGACCGCTTCCTCGTGCTTTACGGTATCGCCGCTCCCGATTCGCAGCGCATCGCCTTC
 Going into each detail of a record is a task for another post. For now we are going to focus on one aspect, the quality score or ***Phred score***.
 
 ## Phred Scores
-The phred score which is the 4th line in each record contains the confidence that the sequencer called the right base. This confidence is a probability.
+The phred score which is the 4th line in each record contains the likelihood the sequencer made an incorrect base call. This confidence is a probability.
 
 > "But Jon, how is "#" a probability?"
 
