@@ -49,7 +49,7 @@ The phred score which is the 4th line in each record contains the likelihood the
 
 > "But Jon, how is "#" a probability?"
 
-That's a great question! The phred score is encoded using ASCII character's meaning that the ASCII value that is assigned to each character - 33 is the actual score. Here is the equation-
+That's a great question! The phred score is encoded using ASCII character's, meaning that the ASCII value that is assigned to each character - 33 is the actual score. Here is the equation-
 
 $$S_{\text{phred}} = \text{ord}(Q_{\text{char}}) - 33$$
 
