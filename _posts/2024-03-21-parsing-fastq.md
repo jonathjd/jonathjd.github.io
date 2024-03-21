@@ -22,7 +22,7 @@ The first project is going to be everyone's favorite-
 
 **File Parsing 🎉**
 
-Obviously this isn't revolutionary or very flashy, but it hits on many of the basics and some due to the large file type we will parse, which is a Fastq file.
+Obviously this isn't revolutionary or very flashy, but it hits on many of the basics and then some due to the large file type we will parse, which is a Fastq file.
 
 ## What is a Fastq file?
 
