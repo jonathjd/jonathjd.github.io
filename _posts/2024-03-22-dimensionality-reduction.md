@@ -56,7 +56,7 @@ There are _many_ reasons why we may want to reduce the feature space of our data
 To give an example let's imagine we have a dataset with one column (also called a feature), and that column contains the height of 6 people.
 
 | Name | Height (in) |
-| ---- | ----------- |
+|:----:|:-----------:|
 | Joe  |     69      |
 | Bob  |     67      |
 | Anne |     66      |
@@ -74,14 +74,14 @@ Since there is only one feature, we can easily visualize our dataset on a number
 
 What if we added a second feature, for example weight? 
 
-| Name | Height (in) |  Weight (lbs) |
-| ---- | ----------- |  ------------ |
-| Joe  |     69      |      200      |
-| Bob  |     67      |      185      |
-| Anne |     66      |      166      |
-| Mary |     60      |      131      |
-| Tom  |     72      |      237      |
-| Jane |     64      |      155      |
+| Name | Height (in) | Weight (lbs) |
+|:----:|:-----------:|:------------:|
+| Joe  |     69      |     200      |
+| Bob  |     67      |     185      |
+| Anne |     66      |     166      |
+| Mary |     60      |     131      |
+| Tom  |     72      |     237      |
+| Jane |     64      |     155      |
 
 Well, we still can comfortably visualize our entire dataset and get even _more_ information from it. In particular, that there seems to be a linear relationship between height and weight. We also increased the dimension of our data by 1, so we now have a 2-dimenionsal dataset.
 
