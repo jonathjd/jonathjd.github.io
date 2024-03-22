@@ -55,7 +55,7 @@ There are _many_ reasons why we may want to reduce the feature space of our data
 
 To give an example let's imagine we have a dataset with one column (also called a feature), and that column contains the height of 6 people.
 
-| Name | Height      |
+| Name | Height (in) |
 | ---- | ----------- |
 | Joe  |     69      |
 | Bob  |     67      |
@@ -75,7 +75,7 @@ Since there is only one feature, we can easily visualize our dataset on a number
 What if we added a second feature, for example weight? 
 
 
-| Name | Height      | Weight       |
+| Name | Height (in) | Weight (lbs) |
 | ---- | ----------- | ------------ |
 | Joe  |     69      |     200      |
 | Bob  |     67      |     185      |
