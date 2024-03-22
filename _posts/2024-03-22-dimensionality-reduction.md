@@ -74,6 +74,7 @@ Since there is only one feature, we can easily visualize our dataset on a number
 
 What if we added a second feature, for example weight? 
 
+
 | Name | Height (in) | Weight (lbs) |
 |:----:|:-----------:|:------------:|
 | Joe  |     69      |     200      |
@@ -82,6 +83,7 @@ What if we added a second feature, for example weight?
 | Mary |     60      |     131      |
 | Tom  |     72      |     237      |
 | Jane |     64      |     155      |
+
 
 Well, we still can comfortably visualize our entire dataset and get even _more_ information from it. In particular, that there seems to be a linear relationship between height and weight. We also increased the dimension of our data by 1, so we now have a 2-dimenionsal dataset.
 
