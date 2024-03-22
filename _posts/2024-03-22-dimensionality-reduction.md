@@ -131,7 +131,7 @@ sns.scatterplot(data=pca_df,
 
 Because PCA preserves the global structure of the data we can make inferences about the data based on the relative distance between individuals points. Meaning, we can say that because the patient samples are closer to calibrators when measured on principal component one (x-axis), they are more similar to each other than to the buffer samples.
 
-# t-Distributed Stochastic Neighbor Embedding
+# t-Distributed Stochastic Neighbor Embedding (t-SNE)
 
 When we reduce our dataset using t-SNE we are doing a couple things differently.
 
