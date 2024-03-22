@@ -77,7 +77,7 @@ def parse_fastq(input_fastq):
 
 The *next()* function will iterate to the next line, so essentially we are saying next(identifier) -> next(sequence) -> next(separater (+)) and end on the quality score.
 
-The yield generator returns a generator object which can be iterated over in a for loop. We do this because there will millions of sequences which we won't be able to hold in memory.
+The yield generator returns a generator object which can be iterated over in a for loop. We do this because there will be millions of sequences which we won't be able to hold in memory.
 
 Next, we create a function that will calculate the quality score from each individual character.
 ```python
@@ -86,7 +86,7 @@ def calculate_phred_scores(quality_score):
 ```
 This function uses list comprehension to calculate the ASCII value for each character in the line and create a list.
 
-Finally, we will main a *main()* function that will contain the bulk of our logic.
+Finally, we will define a *main()* function that will contain the bulk of our logic.
 
 ```python
 def main():
