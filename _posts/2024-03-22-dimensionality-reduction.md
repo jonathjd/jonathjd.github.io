@@ -47,7 +47,7 @@ and
 
 > Why should we do it?
 
-Reducing the dimensionality (also referred to as reducing the **feature space**) of our dataset mean's we are projecting/transforming our data to a lower feature space.
+Reducing the dimensionality, or narrowing down the feature space of our dataset, means we are applying mathematical techniques to transform and represent our data in a space with fewer dimensions.
 
 There are _many_ reasons why we may want to reduce the feature space of our data, but we will only touch on one.
 
