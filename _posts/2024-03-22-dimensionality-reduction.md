@@ -148,7 +148,15 @@ tsne = TSNE(n_components=2, perplexity=15, random_state=42)
 X_tsne = tsne.fit_transform(scaled_data)
 
 tsne_df = pd.DataFrame(X_tsne, columns=cols[:2])
-tsne_df.head()
+
+sns.scatterplot(data=tsne_df,
+                x='Component_1', 
+                y='Component_2', 
+                s=30, 
+                hue='SampleType', 
+                alpha=0.6, 
+                edgecolor='black', 
+                linewidth=0.5)
 ```
 
 <div class="row mt-3">
