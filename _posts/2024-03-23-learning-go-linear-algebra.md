@@ -264,8 +264,8 @@ type Matrix [2][2]float32
 Then, we will declare our matrices _A_ and _B_.
 
 ```go
-var aMatrix = Matrix{{1, 2}, {3, 4}}
-var bMatrix = Matrix{{5, 6}, {7, 8}}
+var aMatrix = Matrix{[1, 2], [3, 4]}
+var bMatrix = Matrix{[5, 6], [7, 8]}
 ```
 
 We'll stick with a 2x2 matrix for today.
