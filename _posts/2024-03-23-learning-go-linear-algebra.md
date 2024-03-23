@@ -268,6 +268,8 @@ var aMatrix = Matrix{[1, 2], [3, 4]}
 var bMatrix = Matrix{[5, 6], [7, 8]}
 ```
 
+> NOTE: I had to use brackets in the above code snippet because an inner set of curly braces messes with the Liquid template rendering. Valid Go syntax uses an inner set of curly braces.
+
 We'll stick with a 2x2 matrix for today.
 
 ```go
