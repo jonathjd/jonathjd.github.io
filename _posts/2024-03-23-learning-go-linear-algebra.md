@@ -2,7 +2,7 @@
 layout: post
 title:  Learning Go through Linear Algebra
 date: 2024-03-23 10:40:16
-description: Learning Go by performing matrix operations
+description: Performing operations on vectors and matrices using Go
 tags: technical data programming
 categories: mathematics code
 giscus_comments: true
