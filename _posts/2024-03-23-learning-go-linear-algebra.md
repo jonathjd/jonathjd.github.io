@@ -91,8 +91,8 @@ A **scalar** is another word for a number that is fully described by a single va
 The first thing we are going to do is assign our variables.
 
 ```go
-	var x int16 = 5
-	var y int16 = 10
+var x int16 = 5
+var y int16 = 10
 ```
 
 **var** indicates that we are declaring a variable.
