@@ -152,7 +152,7 @@ If you noticed, because we declared x and y as int16 if we divide them we would 
 
 This was pretty easy, let's move on to vectors and matrices.
 
-# Adding, subtracting, and calculating the Hadamard and dot product of vectors
+# Linear combinations and calculating the Hadamard and dot product of vectors
 
 First, let's define our vectors *x* and *y*.
 
