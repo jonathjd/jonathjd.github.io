@@ -281,9 +281,9 @@ if __name__ == "__main__":
 
 - First we make our API call and get the data.
 
-- Then we check to see if the path to our csv file containing our data exists, if not we will create it.
+- Then we check to see if the path to our csv file containing our data exists, if not we will create it and save our data.
 
-- If it does exists, we will filter our listings for anything that is not currently in our csv file.
+- If the csv file does exist, we will filter our listings for anything that is not currently in our csv file.
 
 - If this new DataFrame is not empty (meaning there are new listings) we will send a message with the address, price, and days on market.
 
