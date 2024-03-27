@@ -77,7 +77,7 @@ How do we keep track of all the steps and run them in the correct order?
 
 That's where WDL comes in ✅
 
-To get an idea of how WDL works, we are going to write a simple pipeline that will take parse a fastq file and write the base quality scores to a csv file.
+To get an idea of how WDL works, we are going to write a simple pipeline that will parse a fastq file and write the base quality scores to a csv file.
 
 It might be helpful to check out this [article](https://jonathjd.github.io/blog/2024/parsing-fastq/) if you aren't familiar with fastq files or base quality scores. We're also going to improve the script we wrote there as well.
 
@@ -118,7 +118,7 @@ Now let's write our script to parse the fastq file with Python!
 
 We are going to use the script we previously created [here](https://jonathjd.github.io/blog/2024/parsing-fastq/), but with a couple of adjustments.
 
-1. We are going to parse a compressed fastq file.
+- We are going to parse a compressed fastq file.
 
 **Old logic**
 ```python
@@ -151,7 +151,7 @@ def parse_fastq(input_fastq):
                 yield next(input_handle).rstrip()
 ```
 
-2. We are going to write out the base quality scores to a **csv file** instead of printing them to the screen.
+- We are going to write out the base quality scores to a **csv file** instead of printing them to the screen.
 
 **Old logic**
 ```python
@@ -216,7 +216,7 @@ def main(fastq_file, csv_output):
 ```
 
 
-3. We are going to accept the path to the compressed fastq file and the csv file as input arguments.
+- We are going to accept the path to the compressed fastq file and the csv file as input arguments.
 
 **Old logic**
 ```python
