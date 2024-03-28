@@ -127,6 +127,7 @@ The resulting transcript should now have-
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/tagged_molecule.jpg" class="img-fluid rounded z-depth-1" %}
+        <p class="text-center">Image from https://assets.ctfassets.net/an68im79xiti/1C16trEdzy1Folq5xbOijE/7e6fb1f504e130bd561d898384da99d9/CG000315_ChromiumNextGEMSingleCell3-_GeneExpression_v3.1_DualIndex__RevB.pdf.</p>
     </div>
 </div>
 
@@ -161,6 +162,8 @@ Along those same lines, because we aren't sequencing the entire transcript our a
 And that's it! In the next article we are going to dive more deeply into the data and considerations you have to take when processing it. 
 
 Then we are going to go into more downstream analysis.
+
+If you want an in-depth explanation and a walkthrough of a common analysis pipeline, this [course](https://www.singlecellcourse.org/introduction-to-single-cell-rna-seq.html) from the Sanger Institute is a great resource.
 
 I hope you found this useful and see you in the next one!
 
