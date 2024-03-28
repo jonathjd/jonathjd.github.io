@@ -91,6 +91,7 @@ During this step, the individual cells are captured in tiny oil droplets that co
 <div class="row mt-3">
    <div class="col-sm mt-3 mt-md-0">
        {% include figure.html path="assets/img/Flow_Focusing_Device.png" class="img-fluid rounded z-depth-1" %}
+       <p class="text-center">Image from https://en.wikipedia.org/wiki/Droplet-based_microfluidics#/media/File:Flow_Focusing_Device.png.</p>
    </div>
 </div>
 
