@@ -20,7 +20,7 @@ There are tons of different sequencing technologies.
 
 It seems like these days anything can be sequenced, and your expected to not only know each sequencing technique and methodology, but also how to combine data from different methods and know how to analyze it in detail.
 
-But, as the old adage goes, the journey of a thousand miles begins with a single step. So today we are going to begin the first of a 3-part series looking exploring-
+But, as the old adage goes, the journey of a thousand miles begins with a single step. So today we are going to begin the first of a 3-part series exploring-
 
 **Single-cell RNA-Sequencing 🧬**
 
@@ -110,7 +110,7 @@ There are two main sequencing protocols that are used in scRNA-seq.
 1. Full-length
 2. Tag-based
 
-Full length sequencing protocols aim to the _whole_ transcript, while tag-based protocols capture _either_ the 3' or 5' end.
+Full length sequencing protocols aim to sequence the _whole_ transcript, while tag-based protocols capture _either_ the 3' or 5' end.
 
 Full length sequencing protocols in scRNA-seq are the same as in bulk RNA-seq.
 
