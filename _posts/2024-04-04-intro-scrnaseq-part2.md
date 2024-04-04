@@ -119,7 +119,7 @@ After we have successfully mapped our reads to the cells and genes they originat
 
 Just like we saw with the cell barcodes, a UMI can have a sequencing error as well.
 
-To rectify this, a smiliar approach is taken. If two groups of reads have the same gene and cell barcode, but their UMI differs by 1 nucleotide, the group with less amplified reads is lumped in with the group with more reads.
+To rectify this, a smiliar approach is taken. If two groups of reads have the same gene and cell barcode, but their UMI differs by 1 nucleotide, the group with less amplified reads and lower quality base scores is lumped in with the group with more reads.
 
 Similarly, if two groups of reads have the same cell barcode and UMI but the genes they map to are different, the group with less reads is discarded.
 
@@ -128,6 +128,8 @@ In this scenario, if both groups have the same number of reads both groups are d
 Finally, we count all the distinct UMI's in each cell and generate our count matrix!
 
 The technical term is the **unfiltered feature-barcode matrix**.
+
+It's called an "unfiltered" feature-barcode matrix because it contains all detected transcripts, including those that may later be removed for being likely artifacts or noise.
 
 <hr>
 
