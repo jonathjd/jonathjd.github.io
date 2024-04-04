@@ -140,9 +140,7 @@ And that's it! In the next article we will dive into downstream analyses.
 Here are some great resources that go into these steps in more detail if your curious.
 
 10x Genomics algorithms [overview](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/algorithms/overview#alignment)
-
 Sanger Institute Broad [course](https://www.singlecellcourse.org/processing-raw-scrna-seq-sequencing-data-from-reads-to-a-count-matrix.html)
-
 10x Genomics barcode sequencing correction [whitepaper](https://kb.10xgenomics.com/hc/en-us/articles/115003822406-How-does-Cell-Ranger-correct-barcode-sequencing-errors)
 
 I hope you found this useful and see you in the next one!
