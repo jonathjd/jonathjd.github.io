@@ -12,7 +12,7 @@ giscus_comments: true
 
 <div class="row mt-3">
    <div class="col-sm mt-3 mt-md-0">
-       {% include figure.html path="assets/img/scrna_seq_cartoon.jpg" class="img-fluid rounded z-depth-1" %}
+       {% include figure.html path="assets/img/scrna_pt2_banner.jpg" class="img-fluid rounded z-depth-1" %}
    </div>
 </div>
 
@@ -24,64 +24,124 @@ If you haven't seen the first article jump [here](https://jonathjd.github.io/blo
 
 If you want a brief intro to bioinformatic pipelines and even build one that calculates base quality scores with WDL, Python, and Docker check out this article [here](https://jonathjd.github.io/blog/2024/bioinformatics-tools-wdl/).
 
-
 Let's get started!
 
 <hr>
 
 # Overview of the processing pipeline
 
-We've just ran our samples and got back some fastq files. How do we get to a count matrix?
-
-The general overview of the bioinformatic pipeline is as follows-
-
-```mermaid
-graph TD
-    A[QC reads] --> B[Map reads to reference]
-    B --> C[Assig reads to genes]
-    C --> D[Assign reads to cells (cell barcode demultiplexing)]
-    C --> D[Counting unique reads (UMI deduplication)]
-
-```
-
-
-<hr>
-
-# Microfluidic-droplet based methods (10x Genomics)
-
 <div class="row mt-3">
    <div class="col-sm mt-3 mt-md-0">
-       {% include figure.html path="assets/img/Flow_Focusing_Device.png" class="img-fluid rounded z-depth-1" %}
-       <p class="text-center">Image from https://en.wikipedia.org/wiki/Droplet-based_microfluidics#/media/File:Flow_Focusing_Device.png.</p>
+       {% include figure.html path="assets/img/scrna_diagram.png" class="img-fluid rounded z-depth-1" %}
    </div>
 </div>
 
-- Pool the cells and sequence.
+We've just ran our samples and got back some fastq files. How do we get to a count matrix?
 
-Because each bead contained unique barcodes, we can pool all the cells back together and trace back the read to the cell it originated from. ✅
+If you recall, we have reads of sequences that were obtained from individual cells.
 
-Let's move on to sequencing protocols.
+The reads have a cell barcode that tells us what cell the read came from.
+
+The reads also have a unique identifier called a UMI which distinctly identifies each read.
+
+Finally, recall that this was all done from the 3' end of the read.
+
+With this in mind, the general overview of the bioinformatic pipeline is as follows-
+
+1. QC reads
+2. Map reads to reference
+3. Map reads to cells (cell barcode demultiplexing)
+4. Count unique reads (UMI deduplication)
 
 <hr>
 
-# Sequencing protocols
+# Step 1: QC reads
 
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/tagged_molecule.jpg" class="img-fluid rounded z-depth-1" %}
-        <p class="text-center">Image from https://assets.ctfassets.net/an68im79xiti/1C16trEdzy1Folq5xbOijE/7e6fb1f504e130bd561d898384da99d9/CG000315_ChromiumNextGEMSingleCell3-_GeneExpression_v3.1_DualIndex__RevB.pdf.</p>
-    </div>
-</div>
+I abstracted some information away in the previous article for learning purposes, but now I'm going to layer in a few more points.
+
+Along with the cell barcode (CB), the unique molecular identifier (UMI), and the DNA sequence itself, there is also something called a *template switch oligo (TSO)* sequence on the 5' end and a *poly-A tail* on the 3' end.
+
+These are here because we actually reverse-transcribed our RNA transcripts to complimentary DNA before we sequenced the transcripts.
+
+We reverse transcribed our RNA because cDNA is more stable that RNA.
+
+The TSO and the PolyA sequences are a result of reverse transcription for reasons outside the scope of this article.
+
+Because we have this TSO and PolyA tail in our fastq file we, we have to get rid of them. They'll only make it more difficult to figure out the gene each read came from.
+
+<hr>
+
+# Step 2: Map reads to reference
+
+After we get rid of the sequences that are not part of our DNA, we *"map"* the reads back to the genome.
+
+This means we match the read back to the section of our genome from which it originated from.
+
+To do this there are a few different tools called _aligners_ that are often used like-
+
+- **HISAT2**
+- **TopHat2**
+- **STAR**
+
+These aligners are pieces of software that- through algorithms and effeciently written code- align reads back to the genome.
+
+Now, some of the reads will map to _multiple_ places on the genome, these genes are referred to as **"multi-mapped reads"** these are removed.
+
+<hr>
+
+# Step 3: Map reads to cells
+
+Before we try and figure out which cells these reads originated from and count our distinct UMI's we have have to correct any sequencing errors.
+
+As discussed in our previous [article](https://jonathjd.github.io/blog/2024/parsing-fastq/) on fastq files, sequencers can make mistakes.
+
+Sometimes they can mistakenly read an A as a C, or a C as T.
+
+In light of this, we want to make sure that all of our barcodes are correctly read so we can assign the read to its cell of origin correctly.
+
+To do this there are 2 major steps-
+
+1. First, we compare all of of our cell barcodes to a list that 10x Genomics provides called a **barcode whitelist**. This list contains all the valid cell barcode sequences designed for the assay.
+
+2. We compare the list of unique cell barcodes from our experiment to the **barcode whitelist**. We find all of the cell barcode sequences from our experiment that are **not** on the **barcode whitelist** differ by only a single nucleotide from any barcode in the whitelist.
+
+If the 1 nucleotide that is different has a 0.975 posterior probability of being an incorrect base call, it is changed to match the cell barcode on the whitelist!
+
+> Note: Don't worry too much about the "posterior" business for now, just assume that it means that there was a 97.5% chance that the sequencer made an incorrect base call.
+
+Once we finish these steps we can assign each read to the cell it originated from.
+
+<hr>
+
+# Step 4: Count unique reads
+
+After we have successfully mapped our reads to the cells and genes they originated from, all that's left to do is count the UMI's.
+
+Just like we saw with the cell barcodes, a UMI can have a sequencing error as well.
+
+To rectify this, a smiliar approach is taken. If two groups of reads have the same gene and cell barcode, but their UMI differs by 1 nucleotide, the group with less amplified reads is lumped in with the group with more reads.
+
+Similarly, if two groups of reads have the same cell barcode and UMI but the genes they map to are different, the group with less reads is discarded.
+
+In this scenario, if both groups have the same number of reads both groups are discarded.
+
+Finally, we count all the distinct UMI's in each cell and generate our count matrix!
+
+The technical term is the **unfiltered feature-barcode matrix**.
 
 <hr>
 
 # Outro
 
-And that's it! In the next article we are going to dive more deeply into the data and considerations you have to take when processing it. 
+And that's it! In the next article we will dive into downstream analyses.
 
-Then we are going to go into more downstream analysis.
+Here are some great resources that go into these steps in more detail if your curious.
 
-If you want an in-depth explanation and a walkthrough of a common analysis pipeline, this [course](https://www.singlecellcourse.org/introduction-to-single-cell-rna-seq.html) from the Sanger Institute is a great resource.
+10x Genomics algorithms [overview](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/algorithms/overview#alignment)
+
+Sanger Institute Broad [course](https://www.singlecellcourse.org/processing-raw-scrna-seq-sequencing-data-from-reads-to-a-count-matrix.html)
+
+10x Genomics barcode sequencing correction [whitepaper](https://kb.10xgenomics.com/hc/en-us/articles/115003822406-How-does-Cell-Ranger-correct-barcode-sequencing-errors)
 
 I hope you found this useful and see you in the next one!
 
