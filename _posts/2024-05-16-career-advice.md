@@ -2,7 +2,7 @@
 layout: post
 title:  Advice on Growth and Learning
 date: 2024-05-14 09:40:16
-description: excited for whats to come
+description: Helpful tips that have helped me in my career
 tags: data-science bioinformatics code
 categories: code
 ---
