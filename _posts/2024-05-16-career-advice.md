@@ -97,7 +97,7 @@ I have had recruiters and hiring managers ghost me after giving me their word th
 
 > That doesn't mean that if asked about certain situations you should beat around the bush. You should be able to give an clear and honest account of any negative experiences you've had should somebody ask and should it be prudent to discuss. Just make sure it's charitable.
 
-That's all I have for now. I'm sure there's more that but I would probably begin to ramble. Hopefully this was helpful~
+That's all I have for now. I'm sure there's more that but I would probably begin to ramble on. Hopefully this was helpful~
 
 <hr>
 
