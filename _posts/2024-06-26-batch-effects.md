@@ -65,7 +65,7 @@ Raw, unnormalized matrices have a lot of variability because there are many lowl
 
 <div class="row mt-3">
    <div class="col-sm mt-3 mt-md-0">
-       {% include figure.html path="assets/img/ran_unnormalized_pca.png" class="img-fluid rounded z-depth-1" %}
+       {% include figure.html path="assets/img/raw_unnormalized_pca.png" class="img-fluid rounded z-depth-1" %}
    </div>
 </div>
 
@@ -129,7 +129,7 @@ As I'm sure you can tell my commentary gets less and less because I essentially 
 <hr>
 
 # Conclusion
-I know some of my colleagues with a more critical eye might say my approach is a little hand wavy, and it is! Would this be good enough for a late stage clinical drug evaluation with millions of dollars on the line? No, probably not. But most of the researchers I work with aren't working with a study of that kind of scale. That doesn't mean that they shouldn't get fantastic treatment, but one has to weigh the speed at which results are delivered with the confidence you are giving to the researcher that their study will still yield good results. As I said in the beginning all studies have technical variation or "batch effects" and that's ok.
+I know some of my colleagues with a more critical eye might say my approach is a little hand wavy, and it is! Would this be good enough for a late stage clinical drug evaluation with millions of dollars on the line? No, probably not. But 1. if a company is seeing something like this at that stage they probably have bigger issues and 2. most of the researchers I work with aren't working with a study of that kind of scale. That doesn't mean that they shouldn't get fantastic treatment, but one has to weigh the speed at which results are delivered with the confidence you are giving to the researcher that their study will still yield good results. As I said in the beginning all studies have technical variation or "batch effects" and that's ok.
 
 In all honesty I was not expecting this article to be this long and to only have gotten about half way! We still haven't gotten into estimating batch effect size or removing batch effects from datasets, but that is up next!
 
