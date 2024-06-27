@@ -133,6 +133,8 @@ I know some of my colleagues with a more critical eye might say my approach is a
 
 In all honesty I was not expecting this article to be this long and to only have gotten about half way! We still haven't gotten into estimating batch effect size or removing batch effects from datasets, but that is up next!
 
+Also, I would highly suggest becoming more familiar on normalization techniques that are employed for various types of technologies (DESeq2, edgeR, etc). Understanding why they are transforming the data and how they are doing it will be immensely helpful in understanding how technical artifacts are accounted for, and you can start implementing it yourself!
+
 <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="jdickinson" data-color="#5F7FFF" data-emoji=""  data-font="Lato" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
 
 <hr>
