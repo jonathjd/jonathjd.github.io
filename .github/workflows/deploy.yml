@@ -15,28 +15,43 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4 # Updated from v3
+      with:
+        # We need to fetch all branches and tags for the deploy script
+        fetch-depth: 0
+        
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: '3.0.2'
         bundler-cache: true
+        
     - name: Install deps
       run: |
+        # It's good practice to update npm before installing packages
+        npm install -g npm@latest
         npm install -g mermaid.cli
+        
     - name: Setup deploy options
       id: setup
       run: |
-        git config --global user.name "GitHub Action"
+        git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        if [[ ${GITHUB_REF} = refs/pull/*/merge ]]; then # pull request
-          echo "SRC_BRANCH=${GITHUB_HEAD_REF}" >> $GITHUB_OUTPUT
+        
+        # Safer way to check for pull requests
+        if [ "${{ github.event_name }}" = "pull_request" ]; then
+          echo "SRC_BRANCH=${{ github.head_ref }}" >> $GITHUB_OUTPUT
           echo "NO_PUSH=--no-push" >> $GITHUB_OUTPUT
-        elif [[ ${GITHUB_REF} = refs/heads/* ]]; then # branch, e.g. master, source etc
+        else
           echo "SRC_BRANCH=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
         fi
+        
         echo "DEPLOY_BRANCH=gh-pages" >> $GITHUB_OUTPUT
-    - name: Deploy website 
-      run:  yes | bash bin/deploy --verbose ${{ steps.setup.outputs.NO_PUSH }}
-                    --src ${{ steps.setup.outputs.SRC_BRANCH }} 
-                    --deploy ${{ steps.setup.outputs.DEPLOY_BRANCH }} 
+
+    - name: Deploy website
+      # The 'yes |' pipe is often a sign that a script is asking for
+      # interactive confirmation. It's better to find a flag in the
+      # script to disable this, e.g., --yes or --force, if available.
+      # If not, 'yes |' is a functional workaround.
+      run:  yes | bash bin/deploy --verbose ${{ steps.setup.outputs.NO_PUSH }} --src ${{ steps.setup.outputs.SRC_BRANCH }} --deploy ${{ steps.setup.outputs.DEPLOY_BRANCH }}
+
