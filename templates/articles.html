@@ -1,0 +1,23 @@
+{{define "title"}}Articles — {{.Site.Config.Title}}{{end}}
+
+{{define "content"}}
+<section class="section">
+    <h1>Articles</h1>
+    
+    {{if .Articles}}
+    <ul class="article-list">
+        {{range .Articles}}
+        <li class="article-item">
+            <time datetime="{{.Date}}">{{formatDate .ParsedDate}}</time>
+            <div>
+                <a href="{{.URL}}" class="article-title">{{.Title}}</a>
+                {{if .Description}}<p class="article-desc">{{.Description}}</p>{{end}}
+            </div>
+        </li>
+        {{end}}
+    </ul>
+    {{else}}
+    <p class="empty-state">No articles yet.</p>
+    {{end}}
+</section>
+{{end}}

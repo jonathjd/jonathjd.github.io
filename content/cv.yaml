@@ -1,0 +1,48 @@
+name: "Jane Doe"
+title: "Assistant Professor of Computer Science"
+email: "jane@university.edu"
+website: "https://janedoe.com"
+github: "janedoe"
+linkedin: "janedoe"
+headshot: "/headshot.jpg"
+bio: |
+  I am a researcher interested in machine learning, natural language processing, 
+  and computational social science. My work focuses on understanding how language 
+  models can be made more reliable and interpretable.
+
+sections:
+  - title: "Education"
+    entries:
+      - title: "Ph.D. Computer Science"
+        institution: "Stanford University"
+        location: "Stanford, CA"
+        date: "2015–2020"
+        description: "Thesis: Learning Structured Representations for Natural Language"
+      - title: "B.S. Computer Science"
+        institution: "MIT"
+        location: "Cambridge, MA"
+        date: "2011–2015"
+        
+  - title: "Experience"
+    entries:
+      - title: "Assistant Professor"
+        institution: "University of Washington"
+        location: "Seattle, WA"
+        date: "2020–present"
+      - title: "Research Intern"
+        institution: "Google Research"
+        location: "Mountain View, CA"
+        date: "Summer 2019"
+        description: "Worked on large-scale language model pre-training"
+        
+  - title: "Selected Publications"
+    entries:
+      - title: "Understanding Language Model Behavior"
+        institution: "NeurIPS 2024"
+        date: "2024"
+      - title: "Efficient Fine-tuning of Large Models"
+        institution: "ICML 2023"
+        date: "2023"
+      - title: "Structured Prediction for NLP"
+        institution: "ACL 2022"
+        date: "2022"

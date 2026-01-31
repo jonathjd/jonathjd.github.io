@@ -1,0 +1,54 @@
+{{define "content"}}
+<section class="hero">
+    <div class="hero-header">
+        {{if .Site.CV.Headshot}}
+        <img src="{{.Site.CV.Headshot}}" alt="{{.Site.CV.Name}}" class="headshot">
+        {{else}}
+        <div class="headshot-placeholder"></div>
+        {{end}}
+        <div class="hero-text">
+            <h1>{{.Site.CV.Name}}</h1>
+            {{if .Site.CV.Title}}<p class="hero-title">{{.Site.CV.Title}}</p>{{end}}
+        </div>
+    </div>
+    {{if .Site.CV.Bio}}<p class="hero-bio">{{.Site.CV.Bio}}</p>{{end}}
+    
+    <div class="hero-links">
+        {{if .Site.CV.LinkedIn}}<a href="https://linkedin.com/in/{{.Site.CV.LinkedIn}}">LinkedIn</a>{{end}}
+        {{if .Site.CV.Github}}<a href="https://github.com/{{.Site.CV.Github}}">GitHub</a>{{end}}
+        {{if .Site.CV.Email}}<a href="mailto:{{.Site.CV.Email}}">Email</a>{{end}}
+    </div>
+</section>
+
+{{if .RecentNews}}
+<section class="section">
+    <h2>News</h2>
+    <ul class="news-list">
+        {{range .RecentNews}}
+        <li class="news-item">
+            <time datetime="{{.Date}}">{{formatDate .ParsedDate}}</time>
+            <div class="news-content">{{.Content}}</div>
+        </li>
+        {{end}}
+    </ul>
+</section>
+{{end}}
+
+{{if .RecentArticles}}
+<section class="section">
+    <h2>Recent Articles</h2>
+    <ul class="article-list">
+        {{range .RecentArticles}}
+        <li class="article-item">
+            <time datetime="{{.Date}}">{{formatDate .ParsedDate}}</time>
+            <div>
+                <a href="{{.URL}}" class="article-title">{{.Title}}</a>
+                {{if .Description}}<p class="article-desc">{{.Description}}</p>{{end}}
+            </div>
+        </li>
+        {{end}}
+    </ul>
+    <a href="/articles/" class="more-link">All articles →</a>
+</section>
+{{end}}
+{{end}}

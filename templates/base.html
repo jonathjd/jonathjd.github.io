@@ -1,0 +1,35 @@
+{{define "base"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{block "title" .}}{{.Site.Config.Title}}{{end}}</title>
+    <meta name="description" content="{{.Site.Config.Description}}">
+    <meta name="author" content="{{.Site.Config.Author}}">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav class="nav">
+        <a href="/" class="nav-brand">{{.Site.Config.Author}}</a>
+        <div class="nav-links">
+            <a href="/articles/">Articles</a>
+            <a href="/cv.html">CV</a>
+            <a href="/feed.xml">RSS</a>
+        </div>
+    </nav>
+    
+    <main class="main">
+        {{block "content" .}}{{end}}
+    </main>
+    
+    <footer class="footer">
+        <p>© {{year}} {{.Site.Config.Author}}</p>
+    </footer>
+</body>
+</html>
+{{end}}
