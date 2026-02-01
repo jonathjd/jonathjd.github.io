@@ -180,10 +180,10 @@ func loadConfig(site *Site) error {
 	if err != nil {
 		// Default config
 		site.Config = SiteConfig{
-			Title:       "Academic Site",
-			Author:      "Researcher",
-			Description: "Personal academic website",
-			BaseURL:     "https://example.com",
+			Title:       "Jons Website",
+			Author:      "Jonathan Dickinson",
+			Description: "Personal website",
+			BaseURL:     "jonathjd.github.io",
 		}
 		return nil
 	}
@@ -283,7 +283,7 @@ func loadNews(site *Site) error {
 	for _, item := range items {
 		var buf bytes.Buffer
 		md.Convert([]byte(item.Content), &buf)
-		
+
 		parsed, _ := time.Parse("2006-01-02", item.Date)
 		site.News = append(site.News, NewsItem{
 			Date:       item.Date,

@@ -2,7 +2,7 @@
 title: "How to Give Good Technical Presentations"
 date: "2026-01-31"
 description: "How to get good at technical presentations."
-tags: "academia"
+tags: ["academia"]
 draft: false
 ---
 
@@ -112,13 +112,7 @@ Nate Velt [PhD Defense](https://www.youtube.com/watch?v=g6I1WhYE2Kk&t=453s)
 
 My thesis [dissertation](https://youtu.be/rgA2eIzdoNo)
 
-If you feel like this helped you out, feel free click the link below and support this post. Here's my cat Vader for encouragement.
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/vader.jpg" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+If you feel like this helped you out, feel free click the link below and support this post.
 
 <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="jdickinson" data-color="#5F7FFF" data-emoji=""  data-font="Lato" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
 

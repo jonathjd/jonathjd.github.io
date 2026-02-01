@@ -2,9 +2,9 @@ name: "Jonathan Dickinson"
 title: "Bioinformatics Scientist"
 email: "jon[dot]dickinson17[ampersand]gmail.com"
 website: "https://jonathjd.github.io"
-github: "https://github.com/jonathjd"
-linkedin: "https://www.linkedin.com/in/dickinson17/"
-headshot: "static/media/linkedin.jpeg"
+github: "jonathjd"
+linkedin: "dickinson17"
+headshot: "/media/linkedin.jpeg"
 bio: |
   I am a Bioinformatics Scientist interested in scientific software, machine learning,
   and next-generation sequencing methodologies. My work focuses on RNA characterization

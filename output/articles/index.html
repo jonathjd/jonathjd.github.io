@@ -1,12 +1,12 @@
-{{define "base"}}
+
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{{block "title" .}}{{.Site.Config.Title}}{{end}}</title>
-        <meta name="description" content="{{.Site.Config.Description}}" />
-        <meta name="author" content="{{.Site.Config.Author}}" />
+        <title>Articles — Jons Website</title>
+        <meta name="description" content="Personal academic website" />
+        <meta name="author" content="Jonathan Dickinson" />
         <link
             rel="alternate"
             type="application/rss+xml"
@@ -24,7 +24,7 @@
     </head>
     <body>
         <nav class="nav">
-            <a href="/" class="nav-brand">{{.Site.Config.Author}}</a>
+            <a href="/" class="nav-brand">Jonathan Dickinson</a>
             <div class="nav-links">
                 <a href="/articles/">Articles</a>
                 <a href="/cv.html">CV</a>
@@ -32,11 +32,30 @@
             </div>
         </nav>
 
-        <main class="main">{{block "content" .}}{{end}}</main>
+        <main class="main">
+<section class="section">
+    <h1>Articles</h1>
+
+    
+    <ul class="article-list">
+        
+        <li class="article-item">
+            <time datetime="2026-01-31">January 31, 2026</time>
+            <div>
+                <a href="/articles/giving-technical-presentations.html" class="article-title">How to Give Good Technical Presentations</a>
+                
+                <p class="article-desc">How to get good at technical presentations.</p>
+                
+            </div>
+        </li>
+        
+    </ul>
+    
+</section>
+</main>
 
         <footer class="footer">
-            <p>© {{year}} {{.Site.Config.Author}}</p>
+            <p>© 2026 Jonathan Dickinson</p>
         </footer>
     </body>
 </html>
-{{end}}

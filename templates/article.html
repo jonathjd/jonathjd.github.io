@@ -1,20 +1,19 @@
-{{define "title"}}{{.Article.Title}} — {{.Site.Config.Title}}{{end}}
-
-{{define "content"}}
+{{define "title"}}{{.Article.Title}} — {{.Site.Config.Title}}{{end}} {{define
+"content"}}
 <article class="article">
     <header class="article-header">
         <h1>{{.Article.Title}}</h1>
-        <time datetime="{{.Article.Date}}">{{formatDate .Article.ParsedDate}}</time>
+        <time datetime="{{.Article.Date}}"
+            >{{formatDate .Article.ParsedDate}}</time
+        >
         {{if .Article.Tags}}
         <div class="tags">
             {{range .Article.Tags}}<span class="tag">{{.}}</span>{{end}}
         </div>
         {{end}}
     </header>
-    
-    <div class="article-body prose">
-        {{.Article.Content}}
-    </div>
+
+    <div class="article-body prose">{{.Article.Content}}</div>
 </article>
 
 <nav class="article-nav">

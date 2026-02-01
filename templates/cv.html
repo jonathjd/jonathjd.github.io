@@ -1,17 +1,19 @@
-{{define "title"}}CV — {{.Site.Config.Title}}{{end}}
-
-{{define "content"}}
+{{define "title"}}CV — {{.Site.Config.Title}}{{end}} {{define "content"}}
 <section class="cv">
     <header class="cv-header">
         <h1>{{.CV.Name}}</h1>
-        {{if .CV.Title}}<p class="cv-title">{{.CV.Title}}</p>{{end}}
-        
+        {{if .CV.Title}}
+        <p class="cv-title">{{.CV.Title}}</p>
+        {{end}}
+
         <div class="cv-contact">
-            {{if .CV.Email}}<a href="mailto:{{.CV.Email}}">{{.CV.Email}}</a>{{end}}
-            {{if .CV.Website}}<a href="{{.CV.Website}}">{{.CV.Website}}</a>{{end}}
+            {{if .CV.Email}}<a href="mailto:{{.CV.Email}}">{{.CV.Email}}</a
+            >{{end}} {{if .CV.Website}}<a href="{{.CV.Website}}"
+                >{{.CV.Website}}</a
+            >{{end}}
         </div>
     </header>
-    
+
     {{range .CV.Sections}}
     <section class="cv-section">
         <h2>{{.Title}}</h2>
@@ -20,14 +22,21 @@
             <div class="cv-entry-header">
                 <div>
                     <strong class="cv-entry-title">{{.Title}}</strong>
-                    {{if .Institution}}<span class="cv-entry-institution">{{.Institution}}</span>{{end}}
+                    {{if .Institution}}<span class="cv-entry-institution"
+                        >{{.Institution}}</span
+                    >{{end}}
                 </div>
                 <div class="cv-entry-meta">
-                    {{if .Location}}<span class="cv-entry-location">{{.Location}}</span>{{end}}
-                    {{if .Date}}<span class="cv-entry-date">{{.Date}}</span>{{end}}
+                    {{if .Location}}<span class="cv-entry-location"
+                        >{{.Location}}</span
+                    >{{end}} {{if .Date}}<span class="cv-entry-date"
+                        >{{.Date}}</span
+                    >{{end}}
                 </div>
             </div>
-            {{if .Description}}<p class="cv-entry-desc">{{.Description}}</p>{{end}}
+            {{if .Description}}
+            <p class="cv-entry-desc">{{.Description}}</p>
+            {{end}}
         </div>
         {{end}}
     </section>
