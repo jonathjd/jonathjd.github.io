@@ -2,6 +2,8 @@ package main
 
 import (
 	"bytes"
+	"crypto/sha256"
+	"encoding/hex"
 	"encoding/xml"
 	"flag"
 	"fmt"
@@ -98,6 +100,8 @@ type Site struct {
 	News     []NewsItem
 	CV       CV
 	Tags     []Tag
+	// AssetVersion busts browser caches when the stylesheet changes
+	AssetVersion string
 }
 
 // RSS types
@@ -162,6 +166,7 @@ func build() error {
 
 	// Must run before rendering: templates receive copies of the articles
 	buildTags(site)
+	site.AssetVersion = fileHash("static/style.css")
 
 	// Clean and create output directory
 	os.RemoveAll("output")
@@ -348,6 +353,17 @@ func readingTime(content string) int {
 		return 1
 	}
 	return minutes
+}
+
+// fileHash returns a short content hash used as a cache-busting query string.
+// Returns "" if the file can't be read, which just omits the query.
+func fileHash(path string) string {
+	data, err := os.ReadFile(path)
+	if err != nil {
+		return ""
+	}
+	sum := sha256.Sum256(data)
+	return hex.EncodeToString(sum[:])[:8]
 }
 
 func slugify(s string) string {
