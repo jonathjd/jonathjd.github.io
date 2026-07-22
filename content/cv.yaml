@@ -1,14 +1,14 @@
 name: "Jonathan Dickinson"
-title: "Bioinformatics Scientist"
+title: "Senior Data Engineer"
 email: "jon[dot]dickinson17[ampersand]gmail.com"
 website: "https://jonathjd.github.io"
 github: "jonathjd"
 linkedin: "dickinson17"
 headshot: "/media/linkedin.jpeg"
 bio: |
-  I am a Bioinformatics Scientist interested in scientific software, machine learning,
-  and next-generation sequencing methodologies. My work focuses on RNA characterization
-  using various NGS techniques and developing performant analytical software.
+  I am a polyglot scientist with a diverse background and broad interests. Currently, my work focuses
+  on developing analytical software with Python, systems programming with Odin, and cancer MRD diagnsotic
+  research.
 
 sections:
   - title: "Education"
@@ -26,6 +26,11 @@ sections:
 
   - title: "Experience"
     entries:
+      - title: "Senior Data Engineer"
+        institution: "Natera"
+        location: "San Diego, CA"
+        date: "May 2026–Present"
+        description: "Developing bespoke tools and integrating disparate data sources for innovative AI-enabled products."
       - title: "Bioinformatics Scientist"
         institution: "Eclipse Bioinnovations"
         location: "San Diego, CA"

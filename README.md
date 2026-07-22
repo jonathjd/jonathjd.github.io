@@ -92,12 +92,14 @@ headshot: "/headshot.jpg"  # Place image in static/headshot.jpg
 This repo includes a GitHub Actions workflow that automatically builds and deploys on push to `main`.
 
 **Setup:**
+
 1. Push this repo to `jonathjd.github.io` (or your `username.github.io`)
 2. Go to repo Settings → Pages
 3. Under "Build and deployment", select **GitHub Actions** as the source
 4. Push to `main` - the site will deploy automatically
 
 **Manual deployment:**
+
 ```bash
 make build
 # Copy output/ contents to your gh-pages branch or hosting
