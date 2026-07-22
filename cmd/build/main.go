@@ -5,6 +5,7 @@ import (
 	"encoding/xml"
 	"flag"
 	"fmt"
+	stdhtml "html"
 	"html/template"
 	"io"
 	"net/http"
@@ -12,6 +13,7 @@ import (
 	"path/filepath"
 	"regexp"
 	"sort"
+	"strconv"
 	"strings"
 	"time"
 
@@ -33,6 +35,23 @@ type Article struct {
 	Content     template.HTML `yaml:"-"`
 	ParsedDate  time.Time     `yaml:"-"`
 	URL         string        `yaml:"-"`
+	TagLinks    []Tag         `yaml:"-"`
+	Headings    []Heading     `yaml:"-"`
+	ReadMinutes int           `yaml:"-"`
+}
+
+// Heading is one entry in an article's table of contents.
+type Heading struct {
+	ID    string
+	Title string
+	Depth int // relative to the shallowest heading in the article, 0 or 1
+}
+
+type Tag struct {
+	Name  string
+	Slug  string
+	URL   string
+	Count int
 }
 
 type NewsItem struct {
@@ -78,6 +97,7 @@ type Site struct {
 	Articles []Article
 	News     []NewsItem
 	CV       CV
+	Tags     []Tag
 }
 
 // RSS types
@@ -140,9 +160,13 @@ func build() error {
 		return fmt.Errorf("loading CV: %w", err)
 	}
 
+	// Must run before rendering: templates receive copies of the articles
+	buildTags(site)
+
 	// Clean and create output directory
 	os.RemoveAll("output")
 	os.MkdirAll("output/articles", 0755)
+	os.MkdirAll("output/tags", 0755)
 
 	// Load templates
 	tmpl, err := loadTemplates()
@@ -159,6 +183,12 @@ func build() error {
 	}
 	if err := renderArticleList(site, tmpl); err != nil {
 		return fmt.Errorf("rendering article list: %w", err)
+	}
+	if err := renderTagPages(site, tmpl); err != nil {
+		return fmt.Errorf("rendering tag pages: %w", err)
+	}
+	if err := renderTagIndex(site, tmpl); err != nil {
+		return fmt.Errorf("rendering tag index: %w", err)
 	}
 	if err := renderCV(site, tmpl); err != nil {
 		return fmt.Errorf("rendering CV: %w", err)
@@ -254,10 +284,125 @@ func parseArticle(data []byte, md goldmark.Markdown) (Article, error) {
 		return article, err
 	}
 	article.Content = template.HTML(buf.String())
+	article.Headings = extractHeadings(buf.String())
+	article.ReadMinutes = readingTime(buf.String())
 
 	article.ParsedDate, _ = time.Parse("2006-01-02", article.Date)
 
 	return article, nil
+}
+
+var (
+	headingRegex = regexp.MustCompile(`(?is)<h([1-3]) id="([^"]*)"[^>]*>(.*?)</h[1-3]>`)
+	tagRegex     = regexp.MustCompile(`<[^>]+>`)
+	nonAlnum     = regexp.MustCompile(`[^a-z0-9]+`)
+)
+
+// extractHeadings pulls the table of contents out of rendered article HTML.
+// Goldmark's WithAutoHeadingID gives every heading an id to link to. Depth is
+// normalized against the shallowest heading present, since some articles start
+// at h1 and others at h2.
+func extractHeadings(content string) []Heading {
+	matches := headingRegex.FindAllStringSubmatch(content, -1)
+	if len(matches) == 0 {
+		return nil
+	}
+
+	type raw struct {
+		id, title string
+		level     int
+	}
+
+	var found []raw
+	minLevel := 3
+
+	for _, m := range matches {
+		level, _ := strconv.Atoi(m[1])
+		title := strings.TrimSpace(stdhtml.UnescapeString(tagRegex.ReplaceAllString(m[3], "")))
+		if title == "" || m[2] == "" {
+			continue
+		}
+		if level < minLevel {
+			minLevel = level
+		}
+		found = append(found, raw{id: m[2], title: title, level: level})
+	}
+
+	headings := make([]Heading, 0, len(found))
+	for _, f := range found {
+		depth := f.level - minLevel
+		if depth > 1 {
+			depth = 1
+		}
+		headings = append(headings, Heading{ID: f.id, Title: f.title, Depth: depth})
+	}
+
+	return headings
+}
+
+// readingTime estimates minutes to read at 200 words per minute, rounding up.
+func readingTime(content string) int {
+	words := len(strings.Fields(tagRegex.ReplaceAllString(content, " ")))
+	minutes := (words + 199) / 200
+	if minutes < 1 {
+		return 1
+	}
+	return minutes
+}
+
+func slugify(s string) string {
+	return strings.Trim(nonAlnum.ReplaceAllString(strings.ToLower(s), "-"), "-")
+}
+
+// buildTags collects every tag in use into site.Tags and gives each article the
+// linkable version of its own tags. Articles are already sorted newest first.
+func buildTags(site *Site) {
+	bySlug := map[string]*Tag{}
+
+	for _, article := range site.Articles {
+		for _, name := range article.Tags {
+			slug := slugify(name)
+			if slug == "" {
+				continue
+			}
+
+			tag, ok := bySlug[slug]
+			if !ok {
+				tag = &Tag{Name: name, Slug: slug, URL: "/tags/" + slug + ".html"}
+				bySlug[slug] = tag
+			}
+			tag.Count++
+		}
+	}
+
+	// Second pass, so each article's tags carry the final counts
+	for i := range site.Articles {
+		for _, name := range site.Articles[i].Tags {
+			if tag, ok := bySlug[slugify(name)]; ok {
+				site.Articles[i].TagLinks = append(site.Articles[i].TagLinks, *tag)
+			}
+		}
+	}
+
+	for _, tag := range bySlug {
+		site.Tags = append(site.Tags, *tag)
+	}
+	sort.Slice(site.Tags, func(i, j int) bool {
+		return site.Tags[i].Name < site.Tags[j].Name
+	})
+}
+
+func articlesWithTag(site *Site, slug string) []Article {
+	var out []Article
+	for _, article := range site.Articles {
+		for _, tag := range article.TagLinks {
+			if tag.Slug == slug {
+				out = append(out, article)
+				break
+			}
+		}
+	}
+	return out
 }
 
 func loadNews(site *Site) error {
@@ -316,6 +461,8 @@ type Templates struct {
 	Article  *template.Template
 	Articles *template.Template
 	CV       *template.Template
+	Tag      *template.Template
+	Tags     *template.Template
 }
 
 func loadTemplates() (*Templates, error) {
@@ -355,11 +502,23 @@ func loadTemplates() (*Templates, error) {
 		return nil, fmt.Errorf("cv: %w", err)
 	}
 
+	tag, err := parse("templates/base.html", "templates/tag.html")
+	if err != nil {
+		return nil, fmt.Errorf("tag: %w", err)
+	}
+
+	tags, err := parse("templates/base.html", "templates/tags.html")
+	if err != nil {
+		return nil, fmt.Errorf("tags: %w", err)
+	}
+
 	return &Templates{
 		Index:    index,
 		Article:  article,
 		Articles: articles,
 		CV:       cv,
+		Tag:      tag,
+		Tags:     tags,
 	}, nil
 }
 
@@ -418,6 +577,43 @@ func renderArticleList(site *Site, tmpl *Templates) error {
 	}{site, site.Articles}
 
 	return tmpl.Articles.ExecuteTemplate(f, "base", data)
+}
+
+func renderTagPages(site *Site, tmpl *Templates) error {
+	for _, tag := range site.Tags {
+		f, err := os.Create(filepath.Join("output/tags", tag.Slug+".html"))
+		if err != nil {
+			return err
+		}
+
+		data := struct {
+			Site     *Site
+			Tag      Tag
+			Articles []Article
+		}{site, tag, articlesWithTag(site, tag.Slug)}
+
+		if err := tmpl.Tag.ExecuteTemplate(f, "base", data); err != nil {
+			f.Close()
+			return err
+		}
+		f.Close()
+	}
+	return nil
+}
+
+func renderTagIndex(site *Site, tmpl *Templates) error {
+	f, err := os.Create("output/tags/index.html")
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	data := struct {
+		Site *Site
+		Tags []Tag
+	}{site, site.Tags}
+
+	return tmpl.Tags.ExecuteTemplate(f, "base", data)
 }
 
 func renderCV(site *Site, tmpl *Templates) error {

@@ -117,6 +117,9 @@ Copy `output/` contents to your web server.
 
 - Markdown with GitHub Flavored Markdown extensions
 - Automatic RSS feed generation (`/feed.xml`)
+- Collapsible table of contents on articles with 3+ headings
+- Tag pages (`/tags/<tag>.html`) and a tag index (`/tags/`), generated from article frontmatter
+- Estimated reading time in the article header
 - Dark mode support (follows system preference)
 - Responsive design
 - Zero JavaScript required

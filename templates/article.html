@@ -3,15 +3,32 @@
 <article class="article">
     <header class="article-header">
         <h1>{{.Article.Title}}</h1>
-        <time datetime="{{.Article.Date}}"
-            >{{formatDate .Article.ParsedDate}}</time
-        >
-        {{if .Article.Tags}}
+        <p class="article-meta">
+            <time datetime="{{.Article.Date}}"
+                >{{formatDate .Article.ParsedDate}}</time
+            >
+            <span class="meta-sep">·</span>
+            <span>{{.Article.ReadMinutes}} min read</span>
+        </p>
+        {{if .Article.TagLinks}}
         <div class="tags">
-            {{range .Article.Tags}}<span class="tag">{{.}}</span>{{end}}
+            {{range .Article.TagLinks}}<a class="tag" href="{{.URL}}"
+                >{{.Name}}</a
+            >{{end}}
         </div>
         {{end}}
     </header>
+
+    {{if ge (len .Article.Headings) 3}}
+    <details class="toc">
+        <summary>Contents ({{len .Article.Headings}} sections)</summary>
+        <ul>
+            {{range .Article.Headings}}
+            <li class="toc-d{{.Depth}}"><a href="#{{.ID}}">{{.Title}}</a></li>
+            {{end}}
+        </ul>
+    </details>
+    {{end}}
 
     <div class="article-body prose">{{.Article.Content}}</div>
 </article>

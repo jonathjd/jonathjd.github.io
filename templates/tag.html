@@ -1,9 +1,11 @@
-{{define "title"}}Articles — {{.Site.Config.Title}}{{end}} {{define "content"}}
+{{define "title"}}Tagged “{{.Tag.Name}}” — {{.Site.Config.Title}}{{end}}
+{{define "content"}}
 <section class="section">
-    <h1>Articles</h1>
-    <a href="/tags/" class="more-link browse-tags">Browse by tag →</a>
+    <h1>Tagged “{{.Tag.Name}}”</h1>
+    <p class="tag-count-line">
+        {{.Tag.Count}} article{{if ne .Tag.Count 1}}s{{end}}
+    </p>
 
-    {{if .Articles}}
     <ul class="article-list">
         {{range .Articles}}
         <li class="article-item">
@@ -17,8 +19,9 @@
         </li>
         {{end}}
     </ul>
-    {{else}}
-    <p class="empty-state">No articles yet.</p>
-    {{end}}
 </section>
+
+<nav class="article-nav">
+    <a href="/tags/">← All tags</a>
+</nav>
 {{end}}

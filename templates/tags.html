@@ -1,0 +1,21 @@
+{{define "title"}}Tags — {{.Site.Config.Title}}{{end}} {{define "content"}}
+<section class="section">
+    <h1>Tags</h1>
+
+    {{if .Tags}}
+    <div class="tag-cloud">
+        {{range .Tags}}
+        <a class="tag tag-lg" href="{{.URL}}"
+            >{{.Name}} <span class="tag-count">{{.Count}}</span></a
+        >
+        {{end}}
+    </div>
+    {{else}}
+    <p class="empty-state">No tags yet.</p>
+    {{end}}
+</section>
+
+<nav class="article-nav">
+    <a href="/articles/">← Back to articles</a>
+</nav>
+{{end}}
